@@ -1,0 +1,16 @@
+
+mixin radio(isChecked, label, name, id)
+    .radio 
+        input(type="radio", name=name id=id checked=isChecked)&attributes(attributes) 
+        label(for=id)= label
+
+mixin title(name)
+    h1.title= name
+
+mixin svgSprite(id, width, height)
+    svg(width=width, height=height, aria-hidden="true")&attributes(attributes)
+        use(xlink:href="Content/images/sprite.svg#" + id)
+
+mixin link(text, link)
+    a(href= link).link= text
+        +svgSprite('icon-link', 36, 36)

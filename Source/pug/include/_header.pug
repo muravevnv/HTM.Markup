@@ -1,0 +1,40 @@
+include _mixin
+
+header.header 
+    .header-top 
+        .header__lang EN
+        .header__catalog Скачать каталог
+        .header__search 
+        .header__fav 
+            include ../../images/ico-fav.svg
+        .header__cabinet 
+            | Войти
+            include ../../images/ico-cabinet.svg
+    .header-main 
+            a.header__logo(href="#")
+                img(src="Content/images/logo.svg", alt="Лого")
+            nav.header-nav 
+                ul.header-menu 
+                    li.header-menu__item 
+                        a(href="") Каталог
+                    li.header-menu__item 
+                        a(href="") О компании
+                    li.header-menu__item 
+                        a(href="") Портфолио 
+                    li.header-menu__item 
+                        a(href="") Где купить? 
+                    li.header-menu__item 
+                        a(href="") Новости 
+                    li.header-menu__item 
+                        a(href="") Контакты 
+            a.header__tel(href="#") 
+                include ../../images/ico-tel.svg
+                |+7 (495) 125-10-07 
+            .header__metering 
+                include ../../images/ico-metring.svg
+                span Бесплатный замер
+            .header__cabinet-mob 
+                include ../../images/ico-cabinet.svg
+            .header__burger 
+                span 
+                span 

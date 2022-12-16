@@ -1,0 +1,296 @@
+extends include/layout
+include include/_mixin
+block Content 
+    .hero.js-hero-slider.slider
+        .swiper-wrapper 
+            .hero__slide.swiper-slide 
+                .container 
+                    .hero-content 
+                        .hero__img 
+                            img(src="Content/images/main/hero-item-1.png", alt="OFL DROP")
+                        .hero-info
+                            h1.hero__title ДИЗАЙНЕРСКИЕ СВЕТИЛЬНИКИ
+                                span OFL DROP
+                            .hero__img-mob
+                                img(src="Content/images/main/hero-item-1.png", alt="OFL DROP")
+                            .hero__desc Светильники OFL DROP имеют изящную запоминающуюся форму, а также обладают рядом интересных технических особенностей, выгодно отличающих их от конкурентов
+                            a(href="").hero__link.link Подробнее
+                                +svgSprite('icon-link', 36, 36)
+            .hero__slide.swiper-slide 
+                .container 
+                    .hero-content 
+                        .hero__img 
+                            img(src="Content/images/main/hero-item-1.png", alt="OFL DROP")
+                        .hero-info
+                            h1.hero__title ДИЗАЙНЕРСКИЕ СВЕТИЛЬНИКИ
+                                span OFL DROP
+                            .hero__img-mob
+                                img(src="Content/images/main/hero-item-1.png", alt="OFL DROP")
+                            .hero__desc Светильники OFL DROP имеют изящную запоминающуюся форму, а также обладают рядом интересных технических особенностей, выгодно отличающих их от конкурентов
+                            a(href="").hero__link.link Подробнее
+                                +svgSprite('icon-link', 36, 36)
+        .hero-slider__action 
+            .slider__prev.slider__prev--border
+                +svgSprite('arrow', 18, 18)
+            .slider__next.slider__next--border
+                +svgSprite('arrow', 18, 18)
+        .swiper-pagination 
+        .hero-slider__fraction 
+            .hero-slider__current 
+            .hero-slider__total
+    .about
+        .container
+            .about-info
+                .about__subtitle О компании
+                h2.about__title
+                    span HTL 
+                    | — Российская компания <br> по производству светодиодного освещения, Эксперт  в области интерьерного и уличного освещения
+                .about__desc Создаём современное высококачественное светотехническое оборудование и отдельные комплектующих для освещения интерьеров жилых и коммерческих помещений
+                +link('О компании', '#')
+            .advantages
+                .advantages__item
+                    .advantages__num 8
+                    .advantages__desc На рынке боле 8 лет
+                .advantages__item
+                    .advantages__num 5
+                    .advantages__desc Гарантия на продукцию
+                .advantages__item
+                    .advantages__num 1
+                    .advantages__desc Доставка от 1 дня
+    .categories 
+        .container 
+            .categories-head 
+                h2.categories__title Категории продукции
+                +link('Перейти в каталог', '#')
+            .categories-list 
+                .categories__item 
+                    .categories__item-head 
+                        .categories__item-name HTL BUSINESS 
+                        .categories__item-ico 
+                            include ../images/icon-link.svg
+                    .categories__item-body 
+                        .categories__item-subtitle Подкатегории
+                        .categories__item-links 
+                            a(href="").categories__item-link Офисные
+                            a(href="").categories__item-link Линейные
+                            a(href="").categories__item-link Магистральные
+                            a(href="").categories__item-link Даунлайты
+                            a(href="").categories__item-link Медицинские
+                            a(href="").categories__item-link Школьные
+                            a(href="").categories__item-link ЖКХ и тех.помещения
+                        .categories__item-img
+                            img(src="Content/images/main/categories.png", alt="HTL BUSINESS")
+                .categories__item.active 
+                    .categories__item-head 
+                        .categories__item-name HTL BUSINESS 
+                        .categories__item-ico 
+                            include ../images/icon-link.svg
+                    .categories__item-body 
+                        .categories__item-subtitle Подкатегории
+                        .categories__item-links 
+                            a(href="").categories__item-link Офисные
+                            a(href="").categories__item-link Линейные
+                            a(href="").categories__item-link Магистральные
+                            a(href="").categories__item-link Даунлайты
+                            a(href="").categories__item-link Медицинские
+                            a(href="").categories__item-link Школьные
+                            a(href="").categories__item-link ЖКХ и тех.помещения
+                        .categories__item-img
+                            img(src="Content/images/main/categories.png", alt="HTL BUSINESS")
+                .categories__item 
+                    .categories__item-head 
+                        .categories__item-name HTL BUSINESS 
+                        .categories__item-ico 
+                            include ../images/icon-link.svg
+                    .categories__item-body 
+                        .categories__item-subtitle Подкатегории
+                        .categories__item-links 
+                            a(href="").categories__item-link Офисные
+                            a(href="").categories__item-link Линейные
+                            a(href="").categories__item-link Магистральные
+                            a(href="").categories__item-link Даунлайты
+                            a(href="").categories__item-link Медицинские
+                            a(href="").categories__item-link Школьные
+                            a(href="").categories__item-link ЖКХ и тех.помещения
+                        .categories__item-img
+                            img(src="Content/images/main/categories.png", alt="HTL BUSINESS")
+                .categories__item 
+                    .categories__item-head 
+                        .categories__item-name HTL BUSINESS 
+                        .categories__item-ico 
+                            include ../images/icon-link.svg
+                    .categories__item-body 
+                        .categories__item-subtitle Подкатегории
+                        .categories__item-links 
+                            a(href="").categories__item-link Офисные
+                            a(href="").categories__item-link Линейные
+                            a(href="").categories__item-link Магистральные
+                            a(href="").categories__item-link Даунлайты
+                            a(href="").categories__item-link Медицинские
+                            a(href="").categories__item-link Школьные
+                            a(href="").categories__item-link ЖКХ и тех.помещения
+                        .categories__item-img
+                            img(src="Content/images/main/categories.png", alt="HTL BUSINESS")
+                .categories__item 
+                    .categories__item-head 
+                        .categories__item-name HTL BUSINESS 
+                        .categories__item-ico 
+                            include ../images/icon-link.svg
+                    .categories__item-body 
+                        .categories__item-subtitle Подкатегории
+                        .categories__item-links 
+                            a(href="").categories__item-link Офисные
+                            a(href="").categories__item-link Линейные
+                            a(href="").categories__item-link Магистральные
+                            a(href="").categories__item-link Даунлайты
+                            a(href="").categories__item-link Медицинские
+                            a(href="").categories__item-link Школьные
+                            a(href="").categories__item-link ЖКХ и тех.помещения
+                        .categories__item-img
+                            img(src="Content/images/main/categories.png", alt="HTL BUSINESS")
+                .categories__item 
+                    .categories__item-head 
+                        .categories__item-name HTL BUSINESS 
+                        .categories__item-ico 
+                            include ../images/icon-link.svg
+                    .categories__item-body 
+                        .categories__item-subtitle Подкатегории
+                        .categories__item-links 
+                            a(href="").categories__item-link Офисные
+                            a(href="").categories__item-link Линейные
+                            a(href="").categories__item-link Магистральные
+                            a(href="").categories__item-link Даунлайты
+                            a(href="").categories__item-link Медицинские
+                            a(href="").categories__item-link Школьные
+                            a(href="").categories__item-link ЖКХ и тех.помещения
+                        .categories__item-img
+                            img(src="Content/images/main/categories.png", alt="HTL BUSINESS")
+                .categories__item 
+                    .categories__item-head 
+                        .categories__item-name HTL BUSINESS 
+                        .categories__item-ico 
+                            include ../images/icon-link.svg
+                    .categories__item-body 
+                        .categories__item-subtitle Подкатегории
+                        .categories__item-links 
+                            a(href="").categories__item-link Офисные
+                            a(href="").categories__item-link Линейные
+                            a(href="").categories__item-link Магистральные
+                            a(href="").categories__item-link Даунлайты
+                            a(href="").categories__item-link Медицинские
+                            a(href="").categories__item-link Школьные
+                            a(href="").categories__item-link ЖКХ и тех.помещения
+                        .categories__item-img
+                            img(src="Content/images/main/categories.png", alt="HTL BUSINESS")
+                .categories__item 
+                    .categories__item-head 
+                        .categories__item-name HTL BUSINESS 
+                        .categories__item-ico 
+                            include ../images/icon-link.svg
+                    .categories__item-body 
+                        .categories__item-subtitle Подкатегории
+                        .categories__item-links 
+                            a(href="").categories__item-link Офисные
+                            a(href="").categories__item-link Линейные
+                            a(href="").categories__item-link Магистральные
+                            a(href="").categories__item-link Даунлайты
+                            a(href="").categories__item-link Медицинские
+                            a(href="").categories__item-link Школьные
+                            a(href="").categories__item-link ЖКХ и тех.помещения
+                        .categories__item-img
+                            img(src="Content/images/main/categories.png", alt="HTL BUSINESS")
+                .categories__item 
+                    .categories__item-head 
+                        .categories__item-name HTL BUSINESS 
+                        .categories__item-ico 
+                            include ../images/icon-link.svg
+                    .categories__item-body 
+                        .categories__item-subtitle Подкатегории
+                        .categories__item-links 
+                            a(href="").categories__item-link Офисные
+                            a(href="").categories__item-link Линейные
+                            a(href="").categories__item-link Магистральные
+                            a(href="").categories__item-link Даунлайты
+                            a(href="").categories__item-link Медицинские
+                            a(href="").categories__item-link Школьные
+                            a(href="").categories__item-link ЖКХ и тех.помещения
+                        .categories__item-img
+                            img(src="Content/images/main/categories.png", alt="HTL BUSINESS")
+    .main-portfolio.poftfolio
+        .container 
+            
+            .main-portfolio__head
+                h2.main-portfolio__title Портфолио
+                +link('Все проекты', '#')
+            .main-portfolio__panel
+                .main-portfolio__tabs 
+                    .main-portfolio__tab Все (45)
+                    .main-portfolio__tab Уличное (6)
+                    .main-portfolio__tab Промышленное (20)
+                    .main-portfolio__tab Интерьерное (1)
+                    .main-portfolio__tab Ретейл (15)
+                    .main-portfolio__tab Медицинское (3)
+                .slider__prev.slider__prev--border 
+                        +svgSprite('arrow', 18, 18)
+                .slider__next.slider__next--border 
+                    +svgSprite('arrow', 18, 18)
+            .portfolio__slider.js-portfolio-slider.slider
+                .swiper-wrapper 
+                    .swiper-slide.portfolio__slide
+                        .portfolio__slide-img 
+                            img(src="Content/images/portfolio-slider-1.png", alt="")
+                        .portfolio__slide-info
+                            .portfolio__slide-name Уличное
+                            .portfolio__slide-title Тюбинг парк Билайн Парк Горького
+                            .portfolio__slide-link
+                                +link('Подробнее', '#')
+                    .swiper-slide.portfolio__slide
+                        .portfolio__slide-img 
+                             img(src="Content/images/portfolio-slider-2.png", alt="")
+                        .portfolio__slide-info
+                            .portfolio__slide-name Промышленное
+                            .portfolio__slide-title Черкизовский мясокомбинат
+                            .portfolio__slide-link
+                                +link('Подробнее', '#')
+                    .swiper-slide.portfolio__slide
+                        .portfolio__slide-img 
+                            img(src="Content/images/portfolio-slider-1.png", alt="")
+                        .portfolio__slide-info
+                            .portfolio__slide-name Уличное
+                            .portfolio__slide-title Тюбинг парк Билайн Парк Горького
+                            .portfolio__slide-link
+                                +link('Подробнее', '#')
+                .swiper-pagination
+    .main-news 
+        .container 
+            .main-news__head
+                h2.main-news__title Новости и события
+                +link('Подробнее', '#')
+            .main-news__list 
+                .main-news__item.main-news__item--xl 
+                    .main-news__item-img 
+                        img(src="Content/images/main-news.png", alt="Название статьи")
+                    datetime.main-news__item-date 17/10/22
+                    .main-news__item-title Lorem ipsum dolor sit amet, consectetur adipiscing
+                    .main-news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    +link('Читать', '#')
+                .main-news__item 
+                    datetime.main-news__date
+                    .main-news__item-title Lorem ipsum dolor sit amet, consectetur adipiscing
+                    .main-news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    +link('Читать', '#')
+                .main-news__item 
+                    datetime.main-news__item-date
+                    .main-news__item-title Lorem ipsum dolor sit amet, consectetur adipiscing
+                    .main-news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    +link('Читать', '#')
+                .main-news__item 
+                    datetime.main-news__item-date
+                    .main-news__item-title Lorem ipsum dolor sit amet, consectetur adipiscing
+                    .main-news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    +link('Читать', '#')
+    
+                
+                
+                
+                

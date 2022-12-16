@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+
+        meta(name='format-detection', content='telephone=no')
+        meta(name='format-detection', content='date=no')
+        meta(name='format-detection', content='address=no')
+        meta(name='format-detection', content='email=no')
+        meta(property="og:title" content="title страницы")
+        meta(property="og:description" content="description страницы")
+        meta(property="og:image" content="url изображения на странице")
+        meta(property="og:type" content="website")
+        meta(property="og:url" content= "текущий url")
+
+
+        link(rel="shortcut icon" href="favicon.ico")
+        link(rel="icon" href="favicon.ico")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css")
+        link(rel="stylesheet", href="./Content/css/style.css")
+
+        meta(content='notranslate', name='google')
+        block meta
+            title Title
+    body
+        include _header
+        main
+            block Content
+        include _footer
+        script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+        script(src="Content/scripts/main.js") 

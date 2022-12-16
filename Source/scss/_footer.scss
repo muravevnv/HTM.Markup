@@ -1,0 +1,185 @@
+.footer {
+    background-color: $color-black;
+    color: #fff;
+    border-top: 1px solid rgba(#F5F5F5, .5);
+}
+
+.footer-top {
+    padding: 150px 0 100px;
+    .container {
+        display: flex;
+        align-items: flex-start;
+
+    }
+    @include md-block {
+        padding: 65px 0 70px;
+       .container {
+        flex-direction: column;
+       }
+    }
+}
+
+.footer-head {
+    margin-right: 260px;
+    @media(max-width: 1320px) {
+        margin-right: 140px;
+    }
+    @include md-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 78px;
+        margin-right: 0;
+        width: 100%;
+    }
+    @include sm-block {
+        margin-bottom: 67px;
+    }
+}
+
+.footer__logo {
+    @include sm-block {
+        img {
+            height: 22px;
+        }
+    }
+}
+
+.footer-bottom {
+    padding: 40px 0;
+    border-top: 1px solid rgba(#F5F5F5, .5);
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @include md-block {
+        padding: 30px 0;
+    }
+    @include sm-block {
+        padding: 25px 0;
+        .container {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include sm-block {
+        display: block;
+        column-count: 2;
+        position: relative;
+        padding-bottom: 190px;
+    }
+}
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    @include sm-block {
+        break-inside: auto;
+        page-break-inside: avoid;
+        margin-bottom: 40px;
+    }
+}
+
+.footer__subtitle {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1;
+    @include sm-block {
+        font-size: 16px;
+        line-height: 16px;
+        margin-bottom: 25px;
+    }
+}
+
+.footer__link {
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+    &:hover {
+        text-decoration: underline;
+    }
+    @include sm-block {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+.footer__tel, 
+.footer__mail {
+    margin: auto 0 0 0;
+    span {
+        color: $color-text;
+    }
+    a {
+        display: block;
+        font-size: 32px;
+        line-height: 32px;
+        margin-top: 12px;
+        color: #fff;
+        &:hover {
+            text-decoration: underline;
+        }
+        @include md-block {
+            font-size: 22px;
+            line-height: 22px;
+        }
+    }
+}
+
+.footer__tel {
+    @include sm-block {
+        position: absolute;
+        bottom: 80px;
+        left: 0;
+    }
+}
+.footer__mail {
+    @include sm-block {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.footer-socials  {
+    display: grid;
+    grid-template-columns: 40px 40px 40px;
+    grid-gap: 30px;
+    margin-top: 40px;
+    @include md-block {
+        margin-top: 0;
+    }
+}
+
+.footer-socials__item {
+    cursor: pointer;
+    &:hover {
+        opacity: .7;
+    }
+}
+
+.footer__privacy {
+    color:rgba(255, 255, 255, 0.5);
+    @include sm-block {
+        font-size: 14px;
+        line-height: 1;
+    }
+}
+
+.footer__developer {
+    color: rgba(255, 255, 255, 0.5);
+    span {
+        color: #fff;
+    }
+    @include sm-block {
+        font-size: 14px;
+        line-height: 1;
+    }
+}

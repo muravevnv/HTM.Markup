@@ -1,0 +1,516 @@
+extends include/layout
+block Content 
+    .breadcrumbs 
+        .container 
+            ul.breadcrumbs-list 
+                li.breadcrumbs__item 
+                    a(href="") Главная 
+                li.breadcrumbs__item 
+                    a(href="") Каталог
+                li.breadcrumbs__item 
+                    a(href="") HTL BUSINESS
+                li.breadcrumbs__item 
+                    a(href="") Дизайнерский светодиодный светильник Tria OFL
+            .breadcrumbs__btn 
+                
+    .product 
+        .product-head 
+            .container 
+                a(href="#").product__back
+                    +svgSprite('arrow', 14, 14)
+                    | Назад к каталогу
+                .product__articul Артикул: OFL3040.500.9.3080.WH
+                .product-head__action 
+                    button.product__fav 
+                        include ../images/ico-fav.svg
+                    button.product__compare
+                        include ../images/ico-compare.svg
+        .product-main.js-slider-main.slider 
+            .product-main__3d 3D
+            .swiper-wrapper
+                .product-main__item.swiper-slide 
+                    .product-main__info 
+                        h1.product-main__title Tria OFL
+                        p.product-main__subtitle Дизайнерский светодиодный светильник
+                .product-main__item.swiper-slide 
+
+                    .product-main__info 
+                        h1.product-main__title Tria OFL
+                        p.product-main__subtitle Дизайнерский светодиодный светильник
+            .slider__next 
+                +svgSprite('arrow', 14, 14)
+            .slider__prev
+                +svgSprite('arrow', 14, 14)
+            .product-main-slider__progress 
+                .product-main__current 
+                .swiper-pagination
+                .product-main__total
+        .product-about 
+            .container 
+                .product-about__content 
+                    .product-about__left 
+                        .product-tech 
+                            .product-tech__item 
+                                img(src="Content/images/parameter-1.svg", alt="")
+                            .product-tech__item 
+                                img(src="Content/images/parameter-2.svg", alt="")
+                            .product-tech__item 
+                                img(src="Content/images/parameter-4.svg", alt="")
+                            .product-tech__item 
+                                img(src="Content/images/parameter-3.svg", alt="")
+                        .product-parameters 
+                            .product-parameters__title Основные параметры
+                            .product-parameters__list
+                                .product-parameters__item
+                                    span Мощность, Вт:
+                                    | 65-220
+                                .product-parameters__item
+                                    span Срок службы:
+                                    | 50 000 ч
+                                .product-parameters__item
+                                    span Тип крепления:
+                                    | Накладной/подвесной
+                                .product-parameters__item
+                                    span CСТ, К
+                                    | 2700-6500
+                                .product-parameters__item
+                                    span CRI:
+                                    | 80/90
+                                .product-parameters__item
+                                    span Защита, IP:
+                                    | 40
+                    .product-about__right 
+                        .product-about__title Дизайнерский светодиодный светильник
+                        .product-about__desc Даёт мягкое рассеянное освещение, которое достагиается благодаря опаловому рассеивателю, выполненного из стабилизированного поликарбоната, не желтеющего от UV-излучения. Корпус светильника выполняется из анодированного алюминиевого профиля с возможной высотой 50 или 80мм.
+                        .product-about-options 
+                            .product-about-options__title Возможные опции
+                            .product-about__option Управление по протоколу DALI
+                            .product-about__option Управление 0-10V
+                            .product-about__option Система TUNABLE WHITE 2700-6500K (смена диапозона свечения от теплого до холодного)
+                            .product-about__option Оснащение  блоком аварийного питания
+                        .product-about__action
+                            .product-about__btn.btn.btn--border Выбор модификаций
+                            .product-about__btn.btn Где купить?
+        .product-video 
+            .container 
+                h2.product-video__title О линейке
+                .product-video__btn 
+                    .product-video__btn-ico
+                        include ../images/icon-play.svg
+                    span Смотреть видео
+                .product-video__info 
+                    span Длительность видео
+                    | 1:33
+        .product-bracing
+            .container 
+                .product-bracing__content 
+                    .product-bracing__img 
+                        img(src="Content/images/bracing-1.png", alt="Накладной потолочный")
+                    .product-bracing__info 
+                        h2.product-bracing__title Стандартные типы крепления
+                        .product-bracing__types
+                            .product-bracing__type.active Накладной потолочный
+                            .product-bracing__type Накладной настенный
+                            .product-bracing__type Подвесной на троссовом подвесе
+                            .product-bracing__type Подвесной на резьбовые шпильки м4
+        .product-colors 
+            .container 
+                .product-colors__content 
+                    .product-colors__info 
+                        h2.product-colors__title Цветовое решение
+                        .product-colors__panel 
+                            .product-colors__subtitle Стандартные цвета корпуса
+                            .product-colors__slider 
+                                .slider.js-slider-color
+                                    .swiper-wrapper 
+                                        .product-colors__slider-item.swiper-slide
+                                            img(src="Content/images/color-1.png", alt="Цвет")
+                                        .product-colors__slider-item.swiper-slide
+                                            img(src="Content/images/color-2.png", alt="Цвет")
+                                        .product-colors__slider-item.swiper-slide
+                                            img(src="Content/images/color-3.png", alt="Цвет")
+                                .slider__next 
+                                    +svgSprite('arrow', 14, 14)
+                                .slider__prev
+                                    +svgSprite('arrow', 14, 14)
+                                
+                    .product-colors__img.slider
+                        .swiper-wrapper
+                            .product-colors__img-slide.swiper-slide 
+                                img(src="Content/images/color-item-1.png", alt="")
+                            .product-colors__img-slide.swiper-slide 
+                                img(src="Content/images/color-item-2.png", alt="")
+                            .product-colors__img-slide.swiper-slide 
+                                img(src="Content/images/color-item-3.png", alt="")
+        .product-structure 
+            .container 
+                h2.product-structure__title Погружение в детали
+                .product-structure-left
+                    .product-structure__item.product-structure__item--one Основание для установки LED плат
+                    .product-structure__item.product-structure__item--two Корпус светильника
+                .product-structure__img
+                    img(src="Content/images/str-1.png", alt="")
+                    .product-structure__point 
+                        include ../images/line.svg
+                    .product-structure__point
+                        include ../images/line.svg
+                    .product-structure__point 
+                        include ../images/line.svg
+                    .product-structure__point 
+                        include ../images/line.svg
+                    .product-structure__point 
+                        include ../images/line.svg
+                .product-structure-right
+                    .product-structure__item.product-structure__item--three LED плата
+                    .product-structure__item.product-structure__item--four Крышка
+                    .product-structure__item.product-structure__item--five Светорассеиватель
+        .product-size
+            .container 
+                .product-size__content
+                    h2.product-size__title Размеры
+                    .product-size__slider
+                        .js-slider-size.slider
+                            .swiper-wrapper  
+                                .product-size__slider-item.swiper-slide
+                                    .product-size__slider-img
+                                        img(src="Content/images/size-item-1.png", alt="Размер")
+                                    .product-size__slider-text 1290х1050
+                                .product-size__slider-item.swiper-slide
+                                    .product-size__slider-img
+                                        img(src="Content/images/size-item-2.png", alt="Размер")
+                                    .product-size__slider-text 1550х1240
+                                .product-size__slider-item.swiper-slide
+                                    .product-size__slider-img
+                                        img(src="Content/images/size-item-3.png", alt="Размер")
+                                    .product-size__slider-text 1612х1500
+                                .product-size__slider-item.swiper-slide
+                                    .product-size__slider-img
+                                        img(src="Content/images/size-item-4.png", alt="Размер")
+                                    .product-size__slider-text 2073х1803
+                                .product-size__slider-item.swiper-slide
+                                    .product-size__slider-img
+                                        img(src="Content/images/size-item-5.png", alt="Размер")
+                                    .product-size__slider-text 2320х1985
+                                .product-size__slider-item.swiper-slide
+                                    .product-size__slider-img
+                                        img(src="Content/images/size-item-5.png", alt="Размер")
+                                    .product-size__slider-text 2320х1985
+                            .swiper-pagination
+                        .product-size__next 
+                            +svgSprite('arrow', 18, 18)
+                        .product-size__prev
+                            +svgSprite('arrow', 18, 18)
+                .product-size__img 
+                    img(src="Content/images/size-bg.png", alt="Бг")
+        .product-light 
+            .product-ligth__list.js-light-slider 
+                .swiper-wrapper
+                    .product-light__item.swiper-slide
+                        .product-light__img 
+                            img(src="Content/images/product-light-1.png", alt="")
+                        .product-light__title 
+                            span 3000K
+                            | теплый свет
+                    .product-light__item.swiper-slide
+                        .product-light__img 
+                            img(src="Content/images/product-light-1.png", alt="")
+                        .product-light__title 
+                            span 3000K
+                            | теплый свет
+                    .product-light__item.swiper-slide
+                        .product-light__img 
+                            img(src="Content/images/product-light-1.png", alt="")
+                        .product-light__title 
+                            span 3000K
+                            | теплый свет
+                    .product-light__item.swiper-slide
+                        .product-light__img 
+                            img(src="Content/images/product-light-1.png", alt="")
+                        .product-light__title 
+                            span 3000K
+                            | теплый свет
+                .slider__prev
+                    +svgSprite('arrow', 18, 18)
+                .slider__next 
+                    +svgSprite('arrow', 18, 18)
+                .swiper-pagination
+        .product-corner 
+            .container 
+                .product-corner__content 
+                    .product-corner__img 
+                        picture 
+                            source(srcset="Content/images/light-item-mob.png" media='(max-width: 1024px)') 
+                            img(src="Content/images/light-item.png", alt="Угол света")
+                    .product-corner__info 
+                        h2.product-corner__title Угол света
+                        .product-corner__desc Дизайнерский светодиодный светильник DROP имеет в стандартной модификации угол рассеиваения 120 °
+        .product-options 
+            .container 
+                .product-options__list 
+                    .product-options__item 
+                        .product-options__img 
+                            img(src="Content/images/parameter-1.svg", alt="")
+                        .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
+                    .product-options__item 
+                        .product-options__img 
+                            img(src="Content/images/parameter-2.svg", alt="")
+                        .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
+                    .product-options__item 
+                        .product-options__img 
+                            img(src="Content/images/parameter-3.svg", alt="")
+                        .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
+                    .product-options__item 
+                        .product-options__img 
+                            img(src="Content/images/parameter-4.svg", alt="")
+                        .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
+        .product-tabs 
+            .container 
+                .product-tabs-head 
+                    .product-tabs__item.active Выбор модификации
+                    .product-tabs__item Докуменация
+                .product-tabs__content.active
+                    .product-modification 
+                        .product-modification__item 
+                            .product-modification__subtitle Модель
+                            .product-modification__list
+                                .product-modification__radio 
+                                    .radio 
+                                        input.radio__input(type="radio" name="model" id="model-1" ) 
+                                        label.radio__label(for="model-1" ) 
+                                            span.radio__label-text С декоративной рамкой
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="model" id="model-2" ) 
+                                        label.radio__label(for="model-2" ) 
+                                            span.radio__label-text Без видимой рамки
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="model" id="model-3" )
+                                        label.radio__label(for="model-3" ) 
+                                            span.radio__label-text Накладные    
+                        .product-modification__item 
+                            .product-modification__subtitle Размер, мм
+                            .product-modification__list
+                                .product-modification__radio 
+                                    .radio 
+                                        input.radio__input(type="radio" name="size" id="size-1" )
+                                        label.radio__label(for="size-1") 
+                                            span.radio__label-text 300
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="size" id="size-2" )
+                                        label.radio__label(for="size-2") 
+                                            span.radio__label-text 600 
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="size" id="size-3" ) 
+                                        label.radio__label(for="size-3") 
+                                            span.radio__label-text 900
+                        .product-modification__item 
+                            .product-modification__subtitle Цвет корпуса
+                            .product-modification__list
+                                .product-modification__radio 
+                                    .radio 
+                                        input.radio__input(type="radio" name="color" id="color-1" )
+                                        label.radio__label(for="color-1") 
+                                            span.radio__label-text WHITE 9016
+                                            span.radio__label-img 
+                                                img(src="Content/images/label-color-3.png", alt="paint gold")
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="color" id="color-2" )
+                                        label.radio__label(for="color-2") 
+                                            span.radio__label-text BLACK 9005 
+                                            span.radio__label-img 
+                                                img(src="Content/images/label-color-3.png", alt="paint gold")
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="color" id="color-3" ) 
+                                        label.radio__label(for="color-3") 
+                                            span.radio__label-text paint gold
+                                            span.radio__label-img 
+                                                img(src="Content/images/label-color-3.png", alt="paint gold")
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="color" id="color-4" ) 
+                                        label.radio__label(for="color-4") 
+                                            span.radio__label-text paint bronze
+                                            span.radio__label-img 
+                                                img(src="Content/images/label-color-3.png", alt="paint gold")
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="color" id="color-5" ) 
+                                        label.radio__label(for="color-5") 
+                                            span.radio__label-text paint copper
+                                            span.radio__label-img 
+                                                img(src="Content/images/label-color-3.png", alt="paint gold")
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="color" id="color-6" ) 
+                                        label.radio__label(for="color-6") 
+                                            span.radio__label-text WHITE 9016
+                                            span.radio__label-img 
+                                                img(src="Content/images/label-color-3.png", alt="paint gold")
+                        .product-modification__item 
+                            .product-modification__subtitle Мощность, Вт
+                            .product-modification__list
+                                .product-modification__radio 
+                                    .radio 
+                                        input.radio__input(type="radio" name="power" id="power-1" )
+                                        label.radio__label(for="power-1") 
+                                            span.radio__label-text 6
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="power" id="power-2" )
+                                        label.radio__label(for="power-2") 
+                                            span.radio__label-text 12 
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="power" id="power-3" ) 
+                                        label.radio__label(for="power-3") 
+                                            span.radio__label-text 24
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="power" id="power-4" ) 
+                                        label.radio__label(for="power-4") 
+                                            span.radio__label-text 32
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="power" id="power-5" ) 
+                                        label.radio__label(for="power-5") 
+                                            span.radio__label-text 64
+                        .product-modification__item 
+                            .product-modification__subtitle Цветовая температура,К
+                            .product-modification__list
+                                .product-modification__radio 
+                                    .radio 
+                                        input.radio__input(type="radio" name="temp" id="temp-1" )
+                                        label.radio__label(for="temp-1") 
+                                            span.radio__label-text LED 3000 (Base Light) 
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="temp" id="temp-2" )
+                                        label.radio__label(for="temp-2") 
+                                            span.radio__label-text LED 3000 (Base Light)  
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="temp" id="temp-3" ) 
+                                        label.radio__label(for="temp-3") 
+                                            span.radio__label-text LED 3000 (Base Light) 
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="temp" id="temp-4" ) 
+                                        label.radio__label(for="temp-4") 
+                                            span.radio__label-text LED 3000 (Base Light) 
+                        .product-modification__item 
+                            .product-modification__subtitle Влагозащита
+                            .product-modification__list
+                                .product-modification__radio 
+                                    .radio 
+                                        input.radio__input(type="radio" name="waterproof" id="waterproof-1" )
+                                        label.radio__label(for="waterproof-1") 
+                                            span.radio__label-text IP40
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="waterproof" id="waterproof-2" )
+                                        label.radio__label(for="waterproof-2") 
+                                            span.radio__label-text IP40 
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="waterproof" id="waterproof-3" ) 
+                                        label.radio__label(for="waterproof-3") 
+                                            span.radio__label-text IP40
+                        .product-modification__item 
+                            .product-modification__subtitle Угол света
+                            .product-modification__list
+                                .product-modification__radio 
+                                    .radio 
+                                        input.radio__input(type="radio" name="corner" id="corner-1" )
+                                        label.radio__label(for="corner-1") 
+                                            span.radio__label-text Spot
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="corner" id="corner-2" )
+                                        label.radio__label(for="corner-2") 
+                                            span.radio__label-text Spot 
+                                .product-modification__radio
+                                    .radio 
+                                        input.radio__input(type="radio" name="corner" id="corner-3" ) 
+                                        label.radio__label(for="corner-3") 
+                                            span.radio__label-text Spot
+                        .product-modification__action 
+                            button.product-modification__btn.btn.btn--border Сбросить
+                            button.product-modification__btn.btn Применить
+                .product-tabs__content
+                    .product-docs 
+                        .product-docs__list 
+                            a(href="#").product-docs__item 
+                                .product-docs__item-name Руководство по установке ПО ParsecNET Office
+                                .product-docs__item-size (PDF , 987.59 КБ)
+                                .product-docs__item-btn Скачать
+                                    include ../images/ico-download.svg
+                            a(href="#").product-docs__item 
+                                .product-docs__item-name Руководство по установке ПО ParsecNET Office
+                                .product-docs__item-size (PDF , 987.59 КБ)
+                                .product-docs__item-btn Скачать
+                                    include ../images/ico-download.svg
+                            a(href="#").product-docs__item 
+                                .product-docs__item-name Руководство по установке ПО ParsecNET Office
+                                .product-docs__item-size (PDF , 987.59 КБ)
+                                .product-docs__item-btn Скачать 
+                                    include ../images/ico-download.svg
+                            a(href="#").product-docs__item 
+                                .product-docs__item-name Руководство по установке ПО ParsecNET Office
+                                .product-docs__item-size (PDF , 987.59 КБ)
+                                .product-docs__item-btn Скачать
+                                    include ../images/ico-download.svg
+                        .product-docs__btn.btn Скачать все
+        .product-details 
+            .container 
+                .product-details__list
+                    .product-details__item 
+                        .product-details__head Артикул
+                        .product-details__name OFL0054.1195x595.60.3080.WH
+                    .product-details__item 
+                        .product-details__head Мощность, Вт
+                        .product-details__name 6
+                    .product-details__item 
+                        .product-details__head ССТ, К
+                        .product-details__name 3000
+                    .product-details__item 
+                        .product-details__head CRI
+                        .product-details__name 30
+                    .product-details__item 
+                        .product-details__head Св. поток, Лм
+                        .product-details__name 7800
+                    .product-details__item 
+                        .product-details__head Габариты, мм
+                        .product-details__name 1195x595x50
+                    .product-details__item 
+                        .product-details__head КСС, гр.
+                        .product-details__name 120°
+                    .product-details__item 
+                        .product-details__head Цвет корпуса
+                        .product-details__name Белый
+                    .product-details__item 
+                        .product-details__head Защита, IP
+                        .product-details__name IP40
+                    .product-details__item 
+                        .product-details__head Наличие БАП
+                        .product-details__name Нет
+                    .product-details__item 
+                        .product-details__head Управление
+                        .product-details__name Нет
+                .product-details__action    
+                    .product-details__btn.btn Запросить стоимость
+        .product-banner     
+            .container 
+                .product-banner__content 
+                    .product-banner__text 
+                        h2.product-banner__title Скачайте наш каталог
+                        .product-banner__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                        a(href="#").product-banner__btn.btn Скачать каталог
+                    .product-banner__img 
+                        img(src="Content/images/product-banner.png", alt="Баннер")
+
+

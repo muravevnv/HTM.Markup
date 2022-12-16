@@ -1,0 +1,20 @@
+@mixin xl-block {
+    @media(max-width: 1700px) {
+        @content
+    }
+}
+@mixin md-block {
+    @media(max-width: 1024px) {
+        @content
+    }
+}
+@mixin sm-block {
+    @media(max-width: 767px) {
+        @content
+    }
+}
+@mixin xs-block {
+    @media(max-width: 600px) {
+        @content
+    }
+}
