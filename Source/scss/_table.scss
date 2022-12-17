@@ -1,0 +1,41 @@
+.table {
+    @include md-block {
+        display: flex;
+        overflow-x: auto;
+    }
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr .5fr;
+    gap: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid $color-border;
+    @include md-block {
+        min-width: 288px;
+        width: 100%;
+        grid-template-columns: 1fr;
+        border-bottom: 0;
+        margin-right: 190px;
+    }
+}
+
+.table-head {
+
+}
+
+.table__cell {
+    color: $color-black;
+}
+
+.table-body {
+    .table__cell-title {
+        opacity: .6;
+    }
+    .table__cell {
+        font-weight: 500;
+    }
+    @include md-block {
+        display: flex;
+    }
+}

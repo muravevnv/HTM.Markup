@@ -1,6 +1,4 @@
 
-
-
 const productSliderMain = new Swiper('.js-slider-main',{
     slidesPerView: 1,
     spaceBetween: 20,
@@ -157,7 +155,6 @@ const portfolioSlider = new Swiper('.js-portfolio-slider', {
 
     }
 })
-
 
 const newsSlider = new Swiper('.js-news-slider', {
     slidesPerView: 'auto',

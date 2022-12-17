@@ -754,6 +754,25 @@ img {
   color: #141414;
 }
 
+.table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
+  gap: 40px;
+  padding: 30px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.table__cell {
+  color: #1C1C1C;
+}
+
+.table-body .table__cell-title {
+  opacity: 0.6;
+}
+.table-body .table__cell {
+  font-weight: 500;
+}
+
 .socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2170,6 +2189,41 @@ img {
   display: none;
 }
 
+.delivery {
+  padding-bottom: 160px;
+}
+
+.delivery__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 15px 0 40px;
+  gap: 60px;
+  overflow-x: auto;
+}
+.delivery__tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.deliver__tabs-item {
+  white-space: nowrap;
+  font-size: 52px;
+  line-height: 1;
+  color: #1C1C1C;
+  opacity: 0.6;
+}
+.deliver__tabs-item:hover {
+  opacity: 1;
+  font-weight: 500;
+}
+.deliver__tabs-item.active {
+  opacity: 1;
+  font-weight: 500;
+}
+
 .hero {
   position: relative;
 }
@@ -3060,6 +3114,24 @@ img {
   .footer-socials {
     margin-top: 0;
   }
+  .table {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: auto;
+  }
+  .table-row {
+    min-width: 288px;
+    width: 100%;
+    grid-template-columns: 1fr;
+    border-bottom: 0;
+    margin-right: 190px;
+  }
+  .table-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .product-main__item {
     min-height: 400px;
   }
@@ -3540,6 +3612,16 @@ img {
     display: block;
     position: static;
     margin-top: 35px;
+  }
+  .delivery {
+    padding-bottom: 140px;
+  }
+  .delivery__tabs {
+    margin: 10px 0 80px;
+    gap: 50px;
+  }
+  .deliver__tabs-item {
+    font-size: 32px;
   }
   .hero-slider__fraction {
     left: 40%;
@@ -4124,6 +4206,16 @@ img {
   }
   .news-slider .swiper-pagination {
     margin-top: 25px;
+  }
+  .delivery {
+    padding-bottom: 90px;
+  }
+  .delivery__tabs {
+    gap: 30px;
+    margin: 10px 0 70px;
+  }
+  .deliver__tabs-item {
+    font-size: 26px;
   }
   .hero .swiper-pagination {
     display: block;
