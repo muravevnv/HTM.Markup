@@ -8,10 +8,35 @@
     }
 }
 
+.shops__title {
+    @include md-block {
+        margin-bottom: 45px;
+    }
+    @include sm-block {
+        margin-bottom: 40px;
+    }
+}
+
 .shops__head {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    margin-bottom: 70px;
+    @include md-block {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    @include sm-block {
+        margin-bottom: 40px;
+    }
+}
+
+.shops__desc {
+     max-width: 547px;
+     width: 100%;
+     @include md-block {
+        max-width: 509px;
+     }
 }
 
 .shops-list  {

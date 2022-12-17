@@ -1,0 +1,91 @@
+extends include/layout
+include include/_mixin
+block Content
+    .breadcrumbs 
+        .container 
+            ul.breadcrumbs-list 
+                li.breadcrumbs__item 
+                    a(href="") Главная 
+                li.breadcrumbs__item 
+                    a(href="") Диллерам
+    .dillers 
+        .container 
+            h2.dillers__title Дилерам
+            .dillers__desc Преимущества дилеров, которые занимаются поставками продукции торговой марки HTL в России и в странах таможенного союза
+            .bonuses-list 
+                .bonuses__item 
+                    .bonuses__item-head 
+                        .bonuses__item-num 01. 
+                        .bonuses__item-title Персональная скидка
+                    .bonuses__item-desc Размер персональной скидки зависит от ежемесячного объёма закупок
+                .bonuses__item 
+                    .bonuses__item-head 
+                        .bonuses__item-num 02. 
+                        .bonuses__item-title Резерв продукции
+                    .bonuses__item-desc Резерв запаса готовой продукции на складе определяется с учетом потребностей
+                .bonuses__item 
+                    .bonuses__item-head 
+                        .bonuses__item-num 03. 
+                        .bonuses__item-title Право приоритета
+                    .bonuses__item-desc Приоритетное право на получение новой или нестандартной продукции
+                .bonuses__item 
+                    .bonuses__item-head 
+                        .bonuses__item-num 04. 
+                        .bonuses__item-title Поощерение активности
+                    .bonuses__item-desc Заявки на получение товаров от конечных потребителей перенаправляем самым активным региональным дилерам при условии выполнения ежемесячных объемов закупок
+                .bonuses__item 
+                    .bonuses__item-head 
+                        .bonuses__item-num 05. 
+                        .bonuses__item-title Информационная поддержка
+                    .bonuses__item-desc Информационно-рекламную и маркетинговую поддержку
+                .bonuses__item 
+                    .bonuses__item-head 
+                        .bonuses__item-num 06. 
+                        .bonuses__item-title Обеспечение продукцией
+                    .bonuses__item-desc Обеспечение каталогами, буклетами и образцами продукции
+                .bonuses__item 
+                    .bonuses__item-head 
+                        .bonuses__item-num 07. 
+                        .bonuses__item-title Корпоративное обучение
+                    .bonuses__item-desc Обучение на курсах для менеджеров
+                .bonuses__item 
+                    .bonuses__item-head 
+                        .bonuses__item-num 08. 
+                        .bonuses__item-title Поддержка в торгах
+                    .bonuses__item-desc Поддержку при участии в торгах и тендерах
+                .bonuses__item 
+                    .bonuses__item-head 
+                        .bonuses__item-num 09. 
+                        .bonuses__item-title Мотивация
+                    .bonuses__item-desc Участие в стимулирующих мероприятиях для менеджеров
+        .dillers-official 
+            .container
+                .dillers-official__wrapper 
+                    .dillers-official__content
+                        h2.dillers-official__title Как стать официальным дилером?
+                        .dillers-official__info
+                            .dillers-official__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                            .dillers__steps 
+                                .dillers__step 
+                                    .dillers__step-num 01
+                                    .dillers__step-desc Скачать анкету Дилера HTL и отправить ее на электронную почту: <a href="mailto:cooperation@h-t-l.ru">cooperation@h-t-l.ru</a>
+                                .dillers__step 
+                                    .dillers__step-num 02
+                                    .dillers__step-desc Приложить заявку на первую партию светильников с указанием реквизитов организации
+                                .dillers__step 
+                                    .dillers__step-num 03
+                                    .dillers__step-desc После получения документов наши менеджеры свяжутся с Вами и обсудят условия сотрудничества
+                    .dillers-official__btn.btn Заказать звонок
+        .dillers-cabinet 
+            .container 
+                .dillers-cabinet__info 
+                    .dillers-cabinet__head 
+                        h2.dillers-cabinet__title Личный кабинет дилера
+                        .dillers-cabinet__desc Закладывайте оборудование в проекты и получайте за это вознаграждение
+                    .dillers-cabinet__img.dillers-cabinet__img--mob 
+                        img(src="Content/images/laptop.png", alt="Кабинет")
+                    .dillers-cabinet__action 
+                        button.dillers-cabinet__enter.btn.btn--border-w Войти
+                        button.dillers-cabinet__reg.btn Регистрация
+                .dillers-cabinet__img 
+                    img(src="Content/images/laptop.png", alt="Кабинет")

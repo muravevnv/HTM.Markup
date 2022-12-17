@@ -31,6 +31,15 @@
         color: $color-primary;
         border: none;
     }
+    &--border-w {
+        border: 1px solid #fff;
+        color: #fff;
+        background-color: transparent;
+        &:hover {
+            background-color: #fff;
+            color: $color-black;
+        }
+    }
   
     @include md-block {
         height: 66px;

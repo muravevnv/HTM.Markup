@@ -433,6 +433,15 @@ ul:not([class]) li + li {
   color: #03A543;
   border: none;
 }
+.btn--border-w {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+}
+.btn--border-w:hover {
+  background-color: #fff;
+  color: #1C1C1C;
+}
 
 .header-top {
   display: -webkit-box;
@@ -2559,6 +2568,12 @@ ul:not([class]) li + li {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.shops__desc {
+  max-width: 547px;
+  width: 100%;
 }
 
 .shops-list {
@@ -2590,6 +2605,195 @@ ul:not([class]) li + li {
 .shops__item:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
+}
+
+.dillers__title {
+  margin-bottom: 70px;
+}
+
+.dillers__desc {
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+.bonuses-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  margin-bottom: 180px;
+}
+
+.bonuses__item {
+  padding: 45px 40px;
+  min-height: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #F9F9F9;
+  border-radius: 8px;
+}
+
+.bonuses__item-head {
+  padding-top: 16px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.bonuses__item-num {
+  font-size: 18px;
+  line-height: 22px;
+  color: #03A543;
+  margin-bottom: 5px;
+}
+
+.bonuses__item-title {
+  font-size: 28px;
+  line-height: 33px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.dillers-official {
+  margin-bottom: 180px;
+}
+
+.dillers-official__wrapper {
+  padding: 100px 140px 80px 100px;
+  background: #F5F5F5;
+  border-radius: 8px;
+}
+
+.dillers-official__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.dillers-official__title {
+  max-width: 428px;
+  width: 100%;
+  margin-right: 60px;
+}
+
+.dillers-official__desc {
+  max-width: 694px;
+  margin-bottom: 60px;
+}
+
+.dillers-official__btn {
+  display: block;
+  max-width: 429px;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.dillers__steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px 50px;
+}
+
+.dillers__step {
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  border-top: 1px solid #e6e6e6;
+}
+
+.dillers__step-num {
+  width: auto;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 25px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1;
+  color: #03A543;
+}
+
+.dillers__step-desc {
+  width: 100%;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.dillers-cabinet {
+  padding: 110px 0;
+  background-color: #1C1C1C;
+}
+.dillers-cabinet .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.dillers-cabinet__info {
+  max-width: 556px;
+  width: 100%;
+  margin-right: 158px;
+}
+
+.dillers-cabinet__title {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.dillers-cabinet__desc {
+  max-width: 574px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
+  margin-bottom: 80px;
+}
+
+.dillers-cabinet__img {
+  width: 100%;
+}
+.dillers-cabinet__img img {
+  display: block;
+  width: 100%;
+}
+.dillers-cabinet__img--mob {
+  display: none;
+}
+
+.dillers-cabinet__action button {
+  display: block;
+  max-width: 330px;
+  width: 100%;
+}
+
+.dillers-cabinet__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.dillers-cabinet__enter {
+  margin-bottom: 30px;
 }
 
 .hero {
@@ -3284,6 +3488,37 @@ ul:not([class]) li + li {
   }
   .shops-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .dillers-official__wrapper {
+    padding: 40px 40px 50px;
+  }
+  .dillers-official__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .dillers-official__title {
+    margin-right: 0;
+    margin-bottom: 45px;
+  }
+  .dillers-official__desc {
+    max-width: 275px;
+    margin-bottom: 60px;
+  }
+  .dillers-official__btn {
+    max-width: 334px;
+    margin: 55px auto 0;
+  }
+  .dillers__steps {
+    grid-gap: 20px 15px;
+  }
+  .dillers__step {
+    padding: 15px 0;
+  }
+  .dillers__step-desc {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -4121,12 +4356,98 @@ ul:not([class]) li + li {
   .shops {
     padding-bottom: 140px;
   }
+  .shops__title {
+    margin-bottom: 45px;
+  }
+  .shops__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .shops__desc {
+    max-width: 509px;
+  }
   .shops-list {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
   .shops__item {
     min-height: 160px;
+  }
+  .dillers__title {
+    margin-bottom: 45px;
+  }
+  .bonuses-list {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px 20px;
+    margin-bottom: 100px;
+  }
+  .bonuses__item {
+    padding: 30px 20px 40px;
+  }
+  .bonuses__item-head {
+    padding-top: 30px;
+  }
+  .bonuses__item-num {
+    font-size: 16px;
+    line-height: 1;
+  }
+  .bonuses__item-title {
+    font-size: 20px;
+    line-height: 1;
+  }
+  .bonuses__item-desc {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .dillers-official {
+    margin-bottom: 140px;
+  }
+  .dillers-official__wrapper {
+    width: calc(100% + 60px);
+    margin: 0 -30px;
+  }
+  .dillers-cabinet {
+    padding: 70px 0;
+  }
+  .dillers-cabinet__info {
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .dillers-cabinet__title {
+    max-width: 220px;
+  }
+  .dillers-cabinet__desc {
+    max-width: 315px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .dillers-cabinet__img {
+    display: none;
+  }
+  .dillers-cabinet__img--mob {
+    display: block;
+    max-width: 523px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .dillers-cabinet__action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 70px;
+  }
+  .dillers-cabinet__enter {
+    margin-bottom: 0;
+    margin-right: 20px;
   }
   .hero-slider__fraction {
     left: 40%;
@@ -4823,6 +5144,12 @@ ul:not([class]) li + li {
   .shops {
     padding-bottom: 90px;
   }
+  .shops__title {
+    margin-bottom: 40px;
+  }
+  .shops__head {
+    margin-bottom: 40px;
+  }
   .shops-list {
     grid-template-columns: 1fr;
     grid-gap: 15px;
@@ -4834,6 +5161,92 @@ ul:not([class]) li + li {
   }
   .shops__item img {
     height: 100%;
+  }
+  .dillers__title {
+    margin-bottom: 40px;
+  }
+  .dillers__desc {
+    margin-bottom: 50px;
+  }
+  .bonuses-list {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+  .bonuses__item {
+    min-height: 300px;
+  }
+  .bonuses__item-title {
+    font-size: 18px;
+  }
+  .bonuses__item-desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .dillers-official {
+    padding-bottom: 96px;
+    margin-bottom: 70px;
+    position: relative;
+  }
+  .dillers-official__wrapper {
+    padding: 40px 20px;
+    margin: 0;
+    width: 100%;
+  }
+  .dillers-official__desc {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  .dillers-official__btn {
+    position: absolute;
+    bottom: 0px;
+    max-width: 100%;
+    width: calc(100% - 60px);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .dillers__steps {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+  .dillers__step {
+    padding: 20px 0 0 0;
+    margin-bottom: 20px;
+  }
+  .dillers__step:last-of-type {
+    margin-bottom: 0;
+  }
+  .dillers__step-num {
+    font-size: 22px;
+    margin-right: 15px;
+  }
+  .dillers-cabinet {
+    padding: 50px 0;
+  }
+  .dillers-cabinet__title {
+    margin-bottom: 25px;
+  }
+  .dillers-cabinet__desc {
+    margin-bottom: 40px;
+  }
+  .dillers-cabinet__action {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .dillers-cabinet__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .dillers-cabinet__enter {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
   .hero .swiper-pagination {
     display: block;
