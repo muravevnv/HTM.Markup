@@ -1,0 +1,47 @@
+extends include/layout
+include include/_mixin
+block Content 
+    .breadcrumbs 
+        .container 
+            ul.breadcrumbs-list 
+                li.breadcrumbs__item 
+                    a(href="") Проекты
+                li.breadcrumbs__item 
+                    a(href="") Защита проекта
+    .protect 
+        .container 
+            .protect-top 
+                h2.protect__title Защита проекта
+                .protect__desc HTL заинтересована в установлении долгосрочных взаимовыгодных отношений со своими контрагентами и предлагает своим дилерам услугу по защите проектов, которая закрепляет специальные условия по проекту за участвующим в нем контрагентом-поставщиком оборудования HTL
+            .protect-content 
+                .protect__info
+                    .protect__info-title 
+                        span 6 месяцев 
+                        | - базовый срок защиты проекта
+                    .protect__info-desc В зависимости от статуса работ по проекту и проведенной контрагентом работы по продвижению продукции «HTL» возможно продление сроков защиты, а также представление дополнительных проектных скидок
+                    .protect__info-btn.btn Заказать звонок
+                .protect__directions
+                    .protect__direction.active 
+                        .protect__direction-head Cотрудничество по зарегистрированному проекту
+                            +svgSprite('ico-triangle',15,15)
+                        .protect__direction-body
+                            ul 
+                                li приоритетные сроки поставки продукции;
+                                li возможность предоставления специальных условий в рамках проекта;
+                                li оказание технической и информационной поддержки
+                    .protect__direction 
+                        .protect__direction-head Для защиты проекта
+                            +svgSprite('ico-triangle',15,15)
+                        .protect__direction-body
+                            ul 
+                                li приоритетные сроки поставки продукции;
+                                li возможность предоставления специальных условий в рамках проекта;
+                                li оказание технической и информационной поддержки
+                    .protect__direction 
+                        .protect__direction-head Комплекс работ для защиты проекта
+                            +svgSprite('ico-triangle',15,15)
+                        .protect__direction-body
+                            ul 
+                                li приоритетные сроки поставки продукции;
+                                li возможность предоставления специальных условий в рамках проекта;
+                                li оказание технической и информационной поддержки
