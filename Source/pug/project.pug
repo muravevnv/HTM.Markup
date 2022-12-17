@@ -1,0 +1,59 @@
+extends include/layout
+include include/_mixin
+block Content 
+    .breadcrumbs 
+        .container 
+            ul.breadcrumbs-list 
+                li.breadcrumbs__item 
+                    a(href="") Проекты
+                li.breadcrumbs__item 
+                    a(href="") Офис компании МодульБанк
+    .project 
+        .container 
+            h2.project__title Офис компании МодульБанк
+            .project-gallery 
+                .project-gallery__item.project-gallery__item--xl
+                    img(src="Content/images/project/gallery-1.png", alt="")
+                .project-gallery__item 
+                    img(src="Content/images/project/gallery-2.png", alt="")
+                .project-gallery__item 
+                    img(src="Content/images/project/gallery-3.png", alt="")
+                .project-gallery__item 
+                    img(src="Content/images/project/gallery-4.png", alt="")
+                .project-gallery__item 
+                    img(src="Content/images/project/gallery-5.png", alt="")
+                .project-gallery__item 
+                    img(src="Content/images/project/gallery-6.png", alt="")
+                .project-gallery__item 
+                    img(src="Content/images/project/gallery-7.png", alt="")
+        .project-slider
+            .container 
+                h2.project-slider__title Другие проекты
+                .project-slider__wrapper.js-project-slider.slider 
+                    .swiper-wrapper 
+                        .swiper-slide.portfolio__slide
+                            .portfolio__slide-img 
+                                img(src="Content/images/portfolio-slider-1.png", alt="")
+                            .portfolio__slide-info
+                                .portfolio__slide-name Уличное
+                                .portfolio__slide-title Тюбинг парк Билайн Парк Горького
+                                .portfolio__slide-link
+                                    +link('Подробнее', '#')
+                        .swiper-slide.portfolio__slide
+                            .portfolio__slide-img 
+                                img(src="Content/images/portfolio-slider-2.png", alt="")
+                            .portfolio__slide-info
+                                .portfolio__slide-name Промышленное
+                                .portfolio__slide-title Черкизовский мясокомбинат
+                                .portfolio__slide-link
+                                    +link('Подробнее', '#')
+                        .swiper-slide.portfolio__slide
+                            .portfolio__slide-img 
+                                img(src="Content/images/portfolio-slider-1.png", alt="")
+                            .portfolio__slide-info
+                                .portfolio__slide-name Уличное
+                                .portfolio__slide-title Тюбинг парк Билайн Парк Горького
+                                .portfolio__slide-link
+                                    +link('Подробнее', '#')
+                    .swiper-pagination
+
