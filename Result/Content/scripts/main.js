@@ -158,6 +158,26 @@ const portfolioSlider = new Swiper('.js-portfolio-slider', {
     }
 })
 
+
+const newsSlider = new Swiper('.js-news-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar'
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        }
+    }
+})
+
 const menuBtn = document.querySelector('.header__burger');
 const menu = document.querySelector('.header-nav');
 

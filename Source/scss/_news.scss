@@ -1,0 +1,111 @@
+.news {
+    padding-bottom: 180px;
+    @include md-block {
+        padding-bottom: 140px;
+    }
+    @include sm-block  {
+        padding-bottom: 90px;
+    }
+}
+
+.news__title {
+    margin-bottom: 45px;
+    @include sm-block {
+        margin-bottom: 35px;
+    }
+}
+.news__filter {
+    margin-bottom: 45px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @include md-block {
+        margin: 0 -30px 50px;
+        padding: 0 30px;
+    }
+    @include sm-block {
+        margin-bottom: 35px;
+    }
+}
+
+.news__filter-item {
+    margin-right: 60px;
+    white-space: nowrap;
+    cursor: pointer;
+    &:last-of-type {
+        margin-right: 0;
+    }
+    @include sm-block {
+        margin-right: 40px;
+        font-size: 16px;
+        line-height: 1;
+    } 
+}
+
+.news-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 60px 40px;
+    @include md-block {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px 20px;
+    }
+    @include sm-block  {
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+    }
+}
+
+.news__item {
+    @include md-block  {
+        padding-bottom: 25px;
+        border-bottom: 1px solid #E6E6E6;
+    }
+    @include sm-block {
+        &:last-of-type {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.news__item-img {
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @include sm-block {
+        img {
+            height: 260px;
+        }
+    }
+}
+
+.news__item-date {
+    color: $color-text;
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.news__item-title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    max-width: 352px;
+}
+
+.news__item-desc {
+    margin-bottom: 20px;
+    max-width: 400px;
+}

@@ -1,0 +1,15 @@
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.socials__item {
+    display: block;
+    cursor: pointer;
+    svg {
+        display: block;
+    }
+    &:hover {
+
+    }
+}

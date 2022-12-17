@@ -1,0 +1,105 @@
+.contacts__title {
+    margin-bottom: 70px;
+    @include sm-block {
+        margin-bottom: 40px;
+    }
+}
+
+.contacts-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    @include md-block {
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        grid-gap: 50px 140px;
+    }
+    @include sm-block {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+}
+
+.contacts__item {
+    max-width: 269px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    span {
+        font-size: 16px;
+        font-weight: 350;
+        line-height: 25px;
+        color: rgba(28, 28, 28, 0.7);;
+        display: block;
+    }
+    @include md-block {
+        font-size: 22px;
+        line-height: 28px;
+        span {
+            line-height: 1;
+        }
+    }
+    @include sm-block {
+        font-size: 18px;
+        line-height: 1;
+        span {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+    }
+}
+
+
+.contacts-feedback {
+    padding: 180px 0 190px;
+    .contacts__title {
+        max-width: 400px;
+        margin-right: 40px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include md-block  {
+        padding: 100px 0 140px;
+        .container {
+            flex-direction: column;
+        }
+        .contacts__title {
+            margin: 0 0 40px 0;
+        }
+        .form__textarea-input {
+            height: 228px;
+        }
+    }
+    @include sm-block {
+        padding: 70px 0 90px;
+        .contacts__title {
+            max-width: 220px;
+        }
+    }
+}
+
+.contacts-feedback-left {
+    max-width: 1131px;
+    width: 100%;
+}
+
+.contacts-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+    @include md-block {
+        margin-bottom: 35px;
+        gap: 21px;
+    }
+    @include sm-block {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        margin-bottom: 25px;
+    }
+}

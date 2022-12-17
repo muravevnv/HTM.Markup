@@ -1,0 +1,59 @@
+extends include/layout
+include include/_mixin
+block Content
+    .breadcrumbs 
+        .container 
+            ul.breadcrumbs-list 
+                li.breadcrumbs__item 
+                    a(href="") Главная 
+                li.breadcrumbs__item 
+                    a(href="") Контакты
+    .contacts 
+        .container 
+            h2.contacts__title Контакты
+            .contacts-list 
+                .contacts__item 
+                    span Телефон
+                    | +7 (495) 125-10-07
+                .contacts__item 
+                    span Электронная почта 
+                    | info@h-t-l.ru
+                .contacts__item 
+                    span Сервисный центр 
+                    | service@h-t-l.ru
+
+                .contacts__item 
+                    span Дилерский центр
+                    | cooperation@h-t-l.ru
+                .contacts__item 
+                    span Центральный офис
+                    | г. Москва, 2-ой Рощинский проезд, д.8
+                .contacts__item 
+                    span Склад
+                    | г. Москва, Нагорный проезд, д.7 стр.13
+    .map 
+        img(src="Content/images/map.png", alt="Карта")
+    .contacts-feedback 
+        .container 
+            h2.contacts__title Задать вопрос или обратиться за услугой
+            .contacts-feedback-left
+                form.contacts-form 
+                    .contacts-form-row
+                        .contacts-form-cell
+                            .form__item 
+                                input.form__input(type="text" placeholder="Имя*")
+                                label.form__label
+                            .form__item 
+                                input.form__input(type="text" placeholder="Телефон*")
+                                label.form__label
+                            .form__item 
+                                input.form__input(type="text" placeholder="Email")
+                                label.form__label
+                        .contacts-form-cell
+                            .form__textarea
+                                label.form__textarea-label 
+                                textarea.form__textarea-input(name="", cols="30", rows="15" placeholder="Ваше сообщение")
+                    .checkbox 
+                        input.checkbox__input(type="checkbox", name="" id="check-personal-data") 
+                        label.checkbox__label(for="check-personal-data") Нажав на кнопку, вы соглашаетесь на <a href='#'>обработку персональных данных</a>
+                    button(type="submit").btn.form__btn Отправить заявку 

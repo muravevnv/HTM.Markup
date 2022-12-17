@@ -17,6 +17,17 @@
 
 .breadcrumbs__item {
     padding-right: 16px;
+    position: relative;
+    &::before {
+        content: '—';
+        right: 8px;
+        top: 2px;
+        position: absolute;
+        width: 4px;
+        height: 1px;
+        font-size: 10px;
+        color: #8A8A8A;
+    }
     a {
         color: #8A8A8A;
         font-size: 14px;

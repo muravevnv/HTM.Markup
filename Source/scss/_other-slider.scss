@@ -1,0 +1,30 @@
+.other-slider {
+    .news__item {
+        @include sm-block {
+            max-width: 315px;
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.other-slider__title {
+    margin-bottom: 40px;
+    @include sm-block {
+        margin-bottom: 36px;
+    }
+}
+
+.news-slider {
+    .swiper-pagination {
+        display: none;
+        @include md-block {
+            display: block;
+            position: static;
+            margin-top: 35px ;
+        }
+        @include sm-block {
+            margin-top: 25px;
+        }
+    }
+}
