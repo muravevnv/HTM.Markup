@@ -11,14 +11,24 @@ block Content
                 li.breadcrumbs__item 
                     a(href="#") HTL BUSINESS
     //- h2.catalog__title HTL BUSINESS
+    .page 
+        .container 
+            .page-head 
+                h2.page__title HTL BUSINESS
+                .page__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     .catalog 
         .catalog-asside
-            .catalog-list
-                .catalog-list__head.js-accordeon Каталог
-                .catalog-list__body 
-                    .catalog-section 
-                        .catalog-secion__head.active BUSINESS 
-                        .catalog-section__list.active 
+            .catalog-list.open
+                .catalog-list__head.js-accordeon 
+                    span Каталог
+                        +svgSprite('icon-arrow-up', 15, 15)
+                    .catalog-list__close 
+                        +svgSprite('icon-close', 19,19)
+                .catalog-list__body.open 
+                    .catalog-section.open 
+                        .catalog-section__head.js-accordeon BUSINESS 
+                            +svgSprite('ico-triangle', 10, 10)
+                        .catalog-section__list.open
                             .catalog-section__item Все
                                 span 55
                             .catalog-section__item Офисные
@@ -36,27 +46,68 @@ block Content
                             .catalog-section__item ЖКХ и тех.помещения
                                 span 55
                     .catalog-section 
-                        .catalog-secion__head PRODUCTION
+                        .catalog-section__head PRODUCTION
                     .catalog-section 
-                        .catalog-secion__head RETAIL
+                        .catalog-section__head.js-accordeon RETAIL
+                            +svgSprite('ico-triangle', 10, 10)
+                        .catalog-section__list
+                            .catalog-section__item Все
+                                span 55
+                            .catalog-section__item Офисные
+                                span 55
+                            .catalog-section__item Линейные
+                                span 55
+                            .catalog-section__item Магистральные 
+                                span 55
+                            .catalog-section__item Даунлайты
+                                span 55
+                            .catalog-section__item Школьные
+                                span 55
+                            .catalog-section__item Медицинские
+                                span 55
+                            .catalog-section__item ЖКХ и тех.помещения
+                                span 55
                     .catalog-section 
-                        .catalog-secion__head OUTDOOR
+                        .catalog-section__head OUTDOOR
                     .catalog-section 
-                        .catalog-secion__head ARCHITECTURAL
+                        .catalog-section__head ARCHITECTURAL
                     .catalog-section 
-                        .catalog-secion__head EMERGENCY
+                        .catalog-section__head.js-accordeon EMERGENCY
+                            +svgSprite('ico-triangle', 10, 10)
+                        .catalog-section__list
+                            .catalog-section__item Все
+                                span 55
+                            .catalog-section__item Офисные
+                                span 55
+                            .catalog-section__item Линейные
+                                span 55
+                            .catalog-section__item Магистральные 
+                                span 55
+                            .catalog-section__item Даунлайты
+                                span 55
+                            .catalog-section__item Школьные
+                                span 55
+                            .catalog-section__item Медицинские
+                                span 55
+                            .catalog-section__item ЖКХ и тех.помещения
+                                span 55
                     .catalog-section 
-                        .catalog-secion__head INTERIOR
+                        .catalog-section__head INTERIOR
                     .catalog-section 
-                        .catalog-secion__head HOME (DIY)
+                        .catalog-section__head HOME (DIY)
             .filter
                 .filter-head.js-accordeon
                     .filter__title 
                         span Фильтр
+                            +svgSprite('icon-arrow-up', 15, 15)
                     .filter__reset 
+                        +svgSprite('icon-filter-reset', 19, 19)
+                    .filter__close 
+                        +svgSprite('icon-close', 19, 19)
                 .filter-body 
                     .filter-section
-                        .filter-section__head Тип монтажа
+                        .filter-section__head.js-accordeon Тип монтажа
+                            +svgSprite('ico-triangle', 10, 10)
                         .filter-section__body 
                             .filter-section__item 
                                 .filter-check 
@@ -71,7 +122,8 @@ block Content
                                     input.filter-check__input(type="checkbox", id="type-3" name="type")
                                     label.filter-check__label(for="type-3") Подвесной
                     .filter-section
-                        .filter-section__head Мощность, Вт
+                        .filter-section__head.js-accordeon Мощность, Вт
+                            +svgSprite('ico-triangle', 10, 10)
                         .filter-section__body 
                             .filter-range 
                                 .filter-range__value 
@@ -79,7 +131,8 @@ block Content
                                     .filter-range__max 123
                                 .filter-range__slider.range-slider(data-min="24" data-max="40")
                     .filter-section
-                        .filter-section__head Световой поток, Лм
+                        .filter-section__head.js-accordeon Световой поток, Лм
+                            +svgSprite('ico-triangle', 10, 10)
                         .filter-section__body 
                             .filter-range 
                                 .filter-range__value 
@@ -87,7 +140,8 @@ block Content
                                     .filter-range__max 123
                                 .filter-range__slider.range-slider(data-min="1200" data-max="7200")
                     .filter-section
-                        .filter-section__head IP (степень защиты)
+                        .filter-section__head.js-accordeon IP (степень защиты)
+                            +svgSprite('ico-triangle', 10, 10)
                         .filter-section__body 
                             .filter-section__item 
                                 .filter-check 
@@ -106,7 +160,8 @@ block Content
                                     input.filter-check__input(type="checkbox", id="protect-4" name="protect")
                                     label.filter-check__label(for="protect-4") IP 65
                     .filter-section
-                        .filter-section__head Цветовая температура, К
+                        .filter-section__head.js-accordeon Цветовая температура, К
+                            +svgSprite('ico-triangle', 10, 10)
                         .filter-section__body 
                             .filter-section__item 
                                 .filter-check 
@@ -125,7 +180,8 @@ block Content
                                     input.filter-check__input(type="checkbox", id="temperature-4" name="temperature")
                                     label.filter-check__label(for="temperature-4") 2700-6500
                     .filter-section
-                        .filter-section__head Аварийный блок
+                        .filter-section__head.js-accordeon Аварийный блок
+                            +svgSprite('ico-triangle', 10, 10)
                         .filter-section__body 
                             .filter-section__item 
                                 .filter-check 
@@ -136,7 +192,8 @@ block Content
                                     input.filter-check__input(type="checkbox", id="block-2" name="block")
                                     label.filter-check__label(for="block-2") Нет
                     .filter-section
-                        .filter-section__head Индекс цветопередачи (CRI)
+                        .filter-section__head.js-accordeon Индекс цветопередачи (CRI)
+                            +svgSprite('ico-triangle', 10, 10)
                         .filter-section__body 
                             .filter-section__item 
                                 .filter-check 
@@ -151,7 +208,8 @@ block Content
                                     input.filter-check__input(type="checkbox", id="color-idx-2" name="color-idx")
                                     label.filter-check__label(for="color-idx-2") 90
                     .filter-section
-                        .filter-section__head Управление
+                        .filter-section__head.js-accordeon Управление
+                            +svgSprite('ico-triangle', 10, 10)
                         .filter-section__body 
                             .filter-section__item 
                                 .filter-check 

@@ -1,4 +1,11 @@
 .filter {
+    &.open {
+        .filter__title span {
+            svg {
+                transform: rotate(0);
+            }
+        }
+    }
     @include md-block {
         display: none;
         position: fixed;
@@ -27,13 +34,56 @@
     line-height: 28px;
     border-top: 1px solid $color-border;
     border-bottom: 1px solid $color-border;
+    cursor: pointer;
     @include md-block {
         padding: 30px 40px;
     }
 }
 
+.filter__close  {
+    display: none;
+    @include md-block {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.filter__reset {
+    cursor: pointer;
+    @include md-block {
+        display: none;
+    }
+}
+
 .filter__title {
     pointer-events: none;
+    span {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        svg {
+            display: block;
+            margin-right: 25px;
+            transform: rotate(180deg);
+            @include md-block {
+                display: none;
+            }
+        }
+       
+    }
+}
+
+
+
+
+.filter-body {
+    display: none;
+    &.open{
+        display: block;
+    }
+    @include md-block {
+        display: block;
+    }
 }
 
 .filter-section {
@@ -43,16 +93,11 @@
     border-bottom: 1px solid $color-border;
     @include md-block {
         padding: 30px 40px;
-    }
-}
-
-.filter-body {
-    display: none;
-    &.active {
-        display: block;
-    }
-    @include md-block {
-        display: block;
+        &.open {
+            .filter-section__head svg {
+                transform: rotate(180deg);
+            }
+        }
     }
 }
 
@@ -61,13 +106,31 @@
     margin-bottom: 30px;
     font-size: 20px;
     line-height: 1;
+    pointer-events: none;
+  
+    svg {
+        display: none;
+        fill: $color-primary;
+    }
     @include md-block {
+        cursor: pointer;
         margin-bottom: 0;
+        pointer-events: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        svg  {
+            display: block;
+        }
     }
 }
 .filter-section__body {
     @include md-block {
         padding: 40px 0 20px;
+        display: none;
+        &.open {
+            display: block;
+        }
     }
 }
 

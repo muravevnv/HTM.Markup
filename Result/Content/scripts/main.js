@@ -319,32 +319,61 @@ const showFilter = function(){
     filterBtn.addEventListener('click', function(){
         filter.classList.add('active')
     })
-    // filterClose.addEventListener('click', function(){
-    //     filter.classList.remove('active');
-    // })
+    filterClose.addEventListener('click', function(){
+        filter.classList.remove('active');
+    })
 }
 
 if(filterBtn) {
     showFilter();
 }
+const catalog = document.querySelector('.catalog-list');
+const catalogBtn = document.querySelector('.catalog-panel__btn');
+const catalogClose = document.querySelector('.catalog-list__close');
 
-let accItem = document.querySelector('.js-accordeon');
+const showCatalog = function(){
+    catalogBtn.addEventListener('click', function(){
+        catalog.classList.add('active')
+    })
+    catalogClose.addEventListener('click', function(){
+        catalog.classList.remove('active');
+    })
+}
+
+if(catalogBtn) {
+    showCatalog();
+}
 
 
-// const initAcc = function(){
-//     document.addEventListener('click', function(event){
-//         target = event.target;
-//         console.log(target)
-//         if(target === accItem) {
-//             let accBody = target.nextElementSibling;
-//             console.log(target)
-//             target.classList.toggle('active');
-//             accBody.classList.toggle('active');
-//         } 
-//     })
-// }
 
-// if(accItem) {
-//     initAcc();
-// }
+var acc = document.querySelectorAll('.js-accordeon');
 
+for(var i = 0; i < acc.length; i++) {
+	acc[i].addEventListener('click', openAccordion);
+}
+
+
+function openAccordion(e) {
+	var parent = this.parentElement;
+	var article = this.nextElementSibling;
+	
+	if (!parent.classList.contains('open')) {
+		parent.classList.add('open');
+		article.classList.add('open')
+	}
+	else {
+		parent.classList.remove('open');
+		article.classList.remove('open')
+	}
+}
+
+
+
+
+let mobFilterAcc = document.querySelectorAll('.filter-section__head');
+
+if(window.innerWidth < 1024) {
+    mobFilterAcc.forEach((e)=>{
+        e.classList.add('js-accordeon')
+    })
+}

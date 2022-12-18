@@ -17,6 +17,7 @@
 
 }
 
+
 .catalog-asside {
     border: 1px solid $color-border;
     @include md-block {
@@ -246,6 +247,18 @@
     @media screen and (max-width: 600px) {
         grid-template-columns: 1fr;   
     }
+    &.catalog__items--line {
+        grid-template-columns: 1fr !important;
+        .catalog__item {
+            display: flex;
+        }
+        .catalog-bottom {
+            grid-column: 1 / 2 !important;
+        }
+        .catalog__item-img {
+            max-width: 30%;
+        }
+    }
 }
 
 .catalog__item {
@@ -286,6 +299,14 @@
 }
 
 .catalog-list {
+   
+    &.open {
+        .catalog-list__head span {
+            svg {
+                transform: rotate(0);
+            }
+        }
+    }
     @include md-block {
         display: none;
         position: fixed;
@@ -297,9 +318,17 @@
         height: 100vh;
         overflow-y: auto;
         background-color: #fff;
+        z-index: 10;
         &.active {
             display: block;
         }
+    }
+}
+
+.catalog-list__close {
+    display: none;
+    @include md-block {
+        display: block;
     }
 }
 
@@ -312,11 +341,27 @@
     line-height: 1;
     font-weight: 500;
     border-bottom: 1px solid $color-border;
-    &.active {
-        color: $color-primary;
+    cursor: pointer;
+    span {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        svg {
+            display: block;
+            margin-right: 25px;
+            transform: rotate(180deg);
+            @include md-block {
+                display: none;
+            }
+        }
+       
     }
+
     @include md-block {
         padding: 30px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     @include sm-block {
         padding: 30px;
@@ -325,15 +370,18 @@
 }
 
 .catalog-list__body {
+    display: none;
     padding: 40px 40px 40px 100px;
-    &.active {
-        display: none;
+    &.open {
+        display: block;
     }
+    
     @include xl-block {
         padding-left: 80px;
     }
     @include md-block {
         padding: 0;
+        display: block;
     }
 }
 
@@ -341,6 +389,14 @@
     margin-bottom: 20px;
     &:last-of-type {
         margin-bottom: 0;
+    }
+    &.open {
+        .catalog-section__head  {
+            font-weight: 500;
+            svg {
+                transform: rotate(180deg);
+            }
+        }
     }
     @include md-block {
         margin: 0;
@@ -355,14 +411,19 @@
     }
 }
 
-.catalog-secion__head {
+.catalog-section__head {
     font-size: 20px;
     line-height: 1;
-    &.active {
-        font-weight: 500;
+    display: flex;
+    align-items: center;
+    svg {
+        display: block;
+        margin-left: 10px;
     }
+    cursor: pointer;
     @include md-block {
         font-size: 18px;
+        justify-content: space-between;
     }
 }
 
@@ -371,7 +432,8 @@
     font-size: 20px;
     line-height: 1;
     margin: 30px 0 40px;
-    &.active {
+    display: none;
+    &.open {
         display: block;
     }
     @include md-block {

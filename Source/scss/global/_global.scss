@@ -117,3 +117,39 @@ ul:not([class]) {
         }
     }
 }
+
+
+
+.page-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    @include md-block {
+        margin-bottom: 60px;
+    }
+    @include sm-block {
+        margin-bottom: 50px;
+        flex-direction: column;
+    }
+}
+
+.page__title {
+    @include sm-block {
+        margin-bottom: 20px;
+    }
+}
+
+.page__desc {
+    max-width: 372px;
+    font-size: 16px;
+    line-height: 22.5px;
+    @include md-block {
+        max-width: 275px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @include sm-block {
+        max-width: 320px;
+    }
+}
