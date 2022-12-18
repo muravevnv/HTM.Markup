@@ -1,0 +1,53 @@
+.noUi-horizontal {
+    height: 1px;
+    margin-bottom: 40px;
+    padding-right: 16px;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid $color-primary;
+    top: -8px;
+    box-shadow: none;
+    &::before {
+        width: 5px;
+        height: 5px;
+        background-color: $color-primary;
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        left: 5px;
+        border-radius: 50%;
+    }
+    &::after {
+        display: none;
+    }
+}
+
+.noUi-horizontal .noUi-tooltip {
+    left: 0;
+    transform: translate(0, 0);
+    bottom: -200%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+}
+.noUi-horizontal .noUi-origin:first-of-type{
+    .noUi-tooltip {
+        left: 0;
+        transform: translate(0 , 0);
+    }
+
+}
+.noUi-horizontal .noUi-origin:last-of-type {
+    .noUi-tooltip {
+        right: 0;
+        left: auto;
+        transform: translate(0 , 0);
+    }
+}
+

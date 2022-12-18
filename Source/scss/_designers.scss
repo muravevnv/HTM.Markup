@@ -1,0 +1,109 @@
+.designers {
+    padding-bottom: 180px;
+    @include md-block {
+        padding-bottom: 100px;
+    }
+    @include sm-block {
+        padding-bottom: 70px;
+    }
+}
+
+.designers-content {
+    display: grid;
+    grid-template-columns: 1fr .85fr;
+    align-items: center;
+    gap: 100px;
+    @include md-block {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+.designers__title {
+    margin-bottom: 70px;
+    @include md-block {
+        margin-bottom: 45px;
+    }
+    @include sm-block  {
+        margin-bottom: 40px;
+    }
+}
+
+.designers__img {
+    @include md-block {
+        width: calc(100% + 80px);
+        margin: 0 -40px;
+        height: 320px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    @include sm-block {
+        width: calc(100% + 60px);
+        margin: 0 -30px;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+}
+
+.designers__info {
+    @include md-block {
+        padding: 70px 60px 0;
+    }
+    @include sm-block  {
+        padding: 40px 0 0 0;
+    }
+}
+
+.designers__info-title {
+    margin-bottom: 40px;
+    @include md-block {
+        margin-bottom: 25px;
+    }
+    @include sm-block  {
+        margin-bottom: 40px;
+    }
+}
+
+.designers__info-desc {
+    margin-bottom: 60px;
+    font-size: 20px;
+    line-height: 28px;
+    p + p {
+        margin-top: 20px;
+    }
+    @include md-block {
+        font-size: 18px;
+        line-height: 22.5px;
+        margin-bottom: 50px;
+    }
+    @include sm-block  {
+        font-size: 16px;
+        line-height: 22.5px;
+    }
+}
+
+.designers__info-btn {
+    max-width: 430px;
+    width: 100%;
+    @include md-block {
+        max-width: 334px;
+    }
+    @include sm-block {
+        max-width: 100%;
+    }
+}
+
+.designers-feedback {
+    padding: 100px 0 180px;
+    background-color: $color-black;
+    color: #fff;
+    @include md-block {
+        padding: 70px 0;   
+    }
+    @include sm-block {
+        padding: 50px 0;
+    }
+}

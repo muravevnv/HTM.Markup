@@ -244,3 +244,107 @@ for(let i = 0; i < points.length; i++) {
     })
 
 }
+
+
+
+let range = document.querySelectorAll('.filter-range');
+// let rangeSliderMin = rangeSlider.querySelector('.filter-range__min');
+// let rangeSliderMax = rangeSlider.querySelector('.filter-range__max');
+
+range.forEach(function(e){
+    // let rangerMin = ;
+    // let rangeMax = ;
+    let rangeValues = [
+        e.querySelector('.filter-range__min'),
+        e.querySelector('.filter-range__max')
+    ]
+    let rangeSlider = e.querySelector('.filter-range__slider')
+
+    // var snapValues = [
+    //     document.getElementById('slider-snap-value-lower'),
+    //     document.getElementById('slider-snap-value-upper')
+    // ];
+    
+    
+
+    noUiSlider.create(rangeSlider, {
+        start: [rangeSlider.dataset.min, rangeSlider.dataset.max],
+        connect: true,
+        tooltips: true,
+        format: {
+            to: function (value) {
+                return Math.round(value)
+            },
+            from: function (value) {
+                return Number(value);
+            }
+        },
+        range: {
+            'min': Number(rangeSlider.dataset.min),
+            'max': Number(rangeSlider.dataset.max)
+        }
+    });
+
+    rangeSlider.noUiSlider.on('update', function (values, handle) {
+        rangeValues[handle].innerHTML = values[handle];
+    });
+})
+
+
+// var slider = document.querySelector('.range-slider');
+
+// noUiSlider.create(slider, {
+//     start: [slider.dataset.min, slider.dataset.max],
+//     connect: true,
+//     tooltips: true,
+//     format: {
+//         to: function (value) {
+//             return Math.round(value)
+//         },
+//         from: function (value) {
+//             return Number(value);
+//         }
+//     },
+//     range: {
+//         'min': Number(slider.dataset.min),
+//         'max': Number(slider.dataset.max)
+//     }
+// });
+
+const filter = document.querySelector('.filter');
+const filterBtn = document.querySelector('.catalog-panel__filters');
+const filterClose = document.querySelector('.filter__close');
+
+const showFilter = function(){
+    filterBtn.addEventListener('click', function(){
+        filter.classList.add('active')
+    })
+    // filterClose.addEventListener('click', function(){
+    //     filter.classList.remove('active');
+    // })
+}
+
+if(filterBtn) {
+    showFilter();
+}
+
+let accItem = document.querySelector('.js-accordeon');
+
+
+// const initAcc = function(){
+//     document.addEventListener('click', function(event){
+//         target = event.target;
+//         console.log(target)
+//         if(target === accItem) {
+//             let accBody = target.nextElementSibling;
+//             console.log(target)
+//             target.classList.toggle('active');
+//             accBody.classList.toggle('active');
+//         } 
+//     })
+// }
+
+// if(accItem) {
+//     initAcc();
+// }
+

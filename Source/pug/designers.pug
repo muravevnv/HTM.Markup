@@ -1,0 +1,47 @@
+extends include/layout
+include include/_mixin
+block Content
+    .breadcrumbs 
+        .container 
+            ul.breadcrumbs-list 
+                li.breadcrumbs__item 
+                    a(href="") Главная 
+                li.breadcrumbs__item 
+                    a(href="") Дизайнерам и архитекторам
+    .designers 
+        .container
+            h2.designers__title Дизайнерам и архитекторам  
+            .designers-content 
+                .designers__img 
+                    img(src="Content/images/designers.png", alt="Дизайнерам и архитекторам")
+                .designers__info 
+                    h2.designers__info-title Мы предлагаем особые условия сотрудничества для архитекторов и дизайнеров
+                    .designers__info-desc 
+                        p Мы помогаем воплотить в жизнь различные идеи и концепты в области освещения архитектурным бюро, дизайнерам и строителям
+                        p Конструкторы и инженеры нашей компании помогут создать светильники по Вашему авторскому дизайну и оборудование любой сложности под задачи клиента
+                    .designers__info-btn.btn Заказать звонок
+    .designers-feedback.feedback
+        .container 
+            h2.feedback__title Напишите нам
+            .feedback__form 
+                form.form(action="#")
+                    .contacts-form-row
+                        .contacts-form-cell
+                            .form__item 
+                                input.form__input(type="text" placeholder="Имя*")
+                                label.form__label
+                            .form__item 
+                                input.form__input(type="text" placeholder="Телефон*")
+                                label.form__label
+                            .form__item 
+                                input.form__input(type="text" placeholder="Email")
+                                label.form__label
+                        .contacts-form-cell
+                            .form__textarea
+                                label.form__textarea-label 
+                                textarea.form__textarea-input(name="", cols="30", rows="15" placeholder="Ваше сообщение")
+                    .checkbox 
+                        input.checkbox__input(type="checkbox", name="" id="check-personal-data") 
+                        label.checkbox__label(for="check-personal-data") Нажав на кнопку, вы соглашаетесь на <a href='#'>обработку персональных данных</a>
+                    button(type="submit").btn.form__btn Отправить заявку           
+    
