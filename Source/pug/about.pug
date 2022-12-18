@@ -1,0 +1,68 @@
+extends include/layout
+include include/_mixin
+block Content 
+    .breadcrumbs 
+        .container 
+            ul.breadcrumbs-list 
+                li.breadcrumbs__item 
+                    a(href="") Главная 
+                li.breadcrumbs__item 
+                    a(href="") О компании
+    .about 
+        .container
+            h2.about__title О компании
+        .about__video 
+            img(src="Content/images/about-video.jpg", alt="О компании")
+            .video__btn 
+                .video__btn-ico
+                    include ../images/icon-play.svg
+        .about-content 
+            .container 
+                h2.about__subtitle Что мы предлагаем?
+                .about-list 
+                    .about__item 
+                        .about__item-img 
+                            img(src="Content/images/about-1.svg", alt="Разработка")
+                        .about__item-info 
+                            .about__item-title Разработка оборудования
+                            .about__item-desc Выяснение конечных потребности потребителей и разработка нового осветительного оборудования
+                    .about__item 
+                        .about__item-img 
+                            img(src="Content/images/about-2.svg", alt="Контроль")
+                        .about__item-info 
+                            .about__item-title Контроль производства
+                            .about__item-desc Тщательный контроль каждого этапа в процессе производства
+                    .about__item 
+                        .about__item-img 
+                            img(src="Content/images/about-3.svg", alt="Комплектующие")
+                        .about__item-info 
+                            .about__item-title Надежность комплектующих
+                            .about__item-desc Использование комплектующих известных вендоров, энергоэффективность и надежность которых проверена временем
+        .about-feedback 
+            .container 
+                .about-feedback__info
+                    h2.about-feedback__title Мы сделаем вашу жизнь светлее!
+                    .about-feedback__desc 
+                        p Компания «Системы Освещения» HTL аккредитована комплексом градостроительной политики и строительства города Москвыи внесена в Московский территориальный строительный каталог (МТСК)
+                        p Вся представленная на сайте продукция соответствует международным стандартам качества, что подтверждено сертификацией СЕ
+                .about-feedback__form
+                    form.form(action="#")
+                        .form-row 
+                            .form__item 
+                                input.form__input(type="text" placeholder="Имя*")
+                                label.form__label 
+                            .form__item 
+                                input.form__input(type="text" placeholder="Имя*")
+                                label.form__label 
+                            .form__item 
+                                input.form__input(type="text" placeholder="Имя*")
+                                label.form__label 
+                            .form__item 
+                                input.form__input(type="text" placeholder="Имя*")
+                                label.form__label 
+                        .checkbox 
+                            input.checkbox__input(type="checkbox", name="" id="check-personal-data") 
+                            label.checkbox__label(for="check-personal-data") Нажав на кнопку, вы соглашаетесь на <a href='#'>обработку персональных данных</a>
+                        .form__btn.btn Отправить заявку
+                             
+                

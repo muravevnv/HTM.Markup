@@ -3,6 +3,13 @@
         @content
     }
 }
+
+@mixin lg-block {
+    @media(max-width: 1200px) {
+        @content
+    }
+}
+
 @mixin md-block {
     @media(max-width: 1024px) {
         @content

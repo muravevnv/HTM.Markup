@@ -142,6 +142,13 @@
                 display: none;
             }
         }
+        @include sm-block {
+            width: 60px;
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
     }
     &__tel {
         width: 305px;
