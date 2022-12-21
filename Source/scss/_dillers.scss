@@ -192,6 +192,10 @@
     display: flex;
     align-items: flex-start;
     border-top: 1px solid $color-border;
+    a {
+        font-weight: 500;
+        color: $color-black;
+    }
     @media(max-width: 1200px) {
         padding: 15px 0;
     }

@@ -149,8 +149,11 @@
     padding: 50px 40px;
     background: #F5F5F5;
     border-radius: 8px;
+    font-size: 20px;
+    line-height: 28px;
     span {
         color: $color-primary; 
+        font-weight: 500;
     }
     @include md-block {
         margin-top: 70px;

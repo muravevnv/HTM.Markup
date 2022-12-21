@@ -28,6 +28,10 @@
         padding: 26px 0;
         flex-shrink: 0;
         cursor: pointer;
+        &:hover {
+            background-color: $color-primary;
+            color: #fff;
+        }
     }
     &__fav {
         width: 100px;

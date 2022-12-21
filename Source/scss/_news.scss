@@ -39,6 +39,14 @@
     &:last-of-type {
         margin-right: 0;
     }
+    &:hover {
+        color: $color-primary;
+        font-weight: 500;
+    }
+    &.active {
+        color: $color-primary;
+        font-weight: 500;
+    }
     @include sm-block {
         margin-right: 40px;
         font-size: 16px;

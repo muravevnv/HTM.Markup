@@ -123,17 +123,19 @@
 .hero-content {
     display: flex;
     align-items: flex-start;
+    padding-left: 202px;
     @include md-block {
         justify-content: space-between;
+        padding-left: 0;
     }
     @include sm-block  {
         display: block;
     }
 }
 .hero__img {
-    max-width: 577px;
+    max-width: 471px;
     width: 100%;
-    margin-right: 147px;
+    margin-right: 60px;
     &-mob {
         display: none;
     }
@@ -189,6 +191,7 @@
 
 .hero__desc {
     margin-bottom: 45px;
+    max-width: 450px;
     @include md-block  {
         max-width: 354px;
         font-size: 16px;
@@ -232,10 +235,15 @@
 }
 
 .main-about__desc {
-    font-size: 16px;
-    line-height: 22px;
-    max-width: 472px;
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 630px;
     margin-bottom: 45px;
+    @include md-block {
+        max-width: 430px;
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
 
 
@@ -440,6 +448,7 @@
 }
 
 .categories__item-links {
+    max-width: 345px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -533,6 +542,7 @@
     text-decoration: underline;
     line-height: 18px;
     &:hover {
+        font-weight: 500;
         color: $color-primary;
     }
     &.active {
@@ -695,10 +705,14 @@
         .main-news__item-title {
             max-width: 100%;
             margin-bottom: 25px;
+            font-size: 32px;
+            line-height: 1;
         }
         .main-news__item-desc {
             max-width: 612px;
             margin-bottom: 25px;
+            font-size: 18px;
+            line-height: 23px;
         }
     }
     @include md-block {
@@ -707,6 +721,14 @@
             grid-row: initial;
             border-bottom: 1px solid #E6E6E6;
             padding-bottom: 25px;
+            .main-news__item-title {
+                font-size: 22px;
+                line-height: 1;
+            }
+            .main-news__item-desc  {
+                font-size: 16px;
+                line-height: 23px;
+            }
         }
         
         margin-bottom: 0;

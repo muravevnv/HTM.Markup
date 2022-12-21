@@ -585,6 +585,10 @@ ul:not([class]) li + li {
   flex-shrink: 0;
   cursor: pointer;
 }
+.header__catalog:hover {
+  background-color: #03A543;
+  color: #fff;
+}
 .header__fav {
   width: 100px;
   height: 100%;
@@ -732,7 +736,7 @@ ul:not([class]) li + li {
 }
 
 .footer-top {
-  padding: 150px 0 100px;
+  padding: 150px 0 147px;
 }
 .footer-top .container {
   display: -webkit-box;
@@ -803,6 +807,7 @@ ul:not([class]) li + li {
 .footer__tel,
 .footer__mail {
   margin: auto 0 0 0;
+  text-transform: uppercase;
 }
 .footer__tel span,
 .footer__mail span {
@@ -2152,6 +2157,14 @@ ul:not([class]) li + li {
 .news__filter-item:last-of-type {
   margin-right: 0;
 }
+.news__filter-item:hover {
+  color: #03A543;
+  font-weight: 500;
+}
+.news__filter-item.active {
+  color: #03A543;
+  font-weight: 500;
+}
 
 .news-list {
   display: grid;
@@ -2273,18 +2286,18 @@ ul:not([class]) li + li {
   display: none;
 }
 
-.deliver__tabs-item {
+.delivery__tabs-item {
   white-space: nowrap;
   font-size: 52px;
   line-height: 1;
   color: #1C1C1C;
   opacity: 0.6;
 }
-.deliver__tabs-item:hover {
+.delivery__tabs-item:hover {
   opacity: 1;
   font-weight: 500;
 }
-.deliver__tabs-item.active {
+.delivery__tabs-item.active {
   opacity: 1;
   font-weight: 500;
 }
@@ -2428,9 +2441,12 @@ ul:not([class]) li + li {
   padding: 50px 40px;
   background: #F5F5F5;
   border-radius: 8px;
+  font-size: 20px;
+  line-height: 28px;
 }
 .warranty-main__asside span {
   color: #03A543;
+  font-weight: 500;
 }
 
 .services {
@@ -2743,6 +2759,10 @@ ul:not([class]) li + li {
   -ms-flex-align: start;
   align-items: flex-start;
   border-top: 1px solid #e6e6e6;
+}
+.dillers__step a {
+  font-weight: 500;
+  color: #1C1C1C;
 }
 
 .dillers__step-num {
@@ -3791,12 +3811,13 @@ ul:not([class]) li + li {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  padding-left: 202px;
 }
 
 .hero__img {
-  max-width: 577px;
+  max-width: 471px;
   width: 100%;
-  margin-right: 147px;
+  margin-right: 60px;
 }
 .hero__img-mob {
   display: none;
@@ -3821,6 +3842,7 @@ ul:not([class]) li + li {
 
 .hero__desc {
   margin-bottom: 45px;
+  max-width: 450px;
 }
 
 .main-about {
@@ -3856,9 +3878,9 @@ ul:not([class]) li + li {
 }
 
 .main-about__desc {
-  font-size: 16px;
-  line-height: 22px;
-  max-width: 472px;
+  font-size: 20px;
+  line-height: 28px;
+  max-width: 630px;
   margin-bottom: 45px;
 }
 
@@ -4002,6 +4024,7 @@ ul:not([class]) li + li {
 }
 
 .categories__item-links {
+  max-width: 345px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4073,6 +4096,7 @@ ul:not([class]) li + li {
   line-height: 18px;
 }
 .main-portfolio__tab:hover {
+  font-weight: 500;
   color: #03A543;
 }
 .main-portfolio__tab.active {
@@ -4180,10 +4204,14 @@ ul:not([class]) li + li {
 .main-news__item--xl .main-news__item-title {
   max-width: 100%;
   margin-bottom: 25px;
+  font-size: 32px;
+  line-height: 1;
 }
 .main-news__item--xl .main-news__item-desc {
   max-width: 612px;
   margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .main-news__item-img {
@@ -5301,7 +5329,7 @@ ul:not([class]) li + li {
     margin: 10px 0 80px;
     gap: 50px;
   }
-  .deliver__tabs-item {
+  .delivery__tabs-item {
     font-size: 32px;
   }
   .project {
@@ -5813,6 +5841,7 @@ ul:not([class]) li + li {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    padding-left: 0;
   }
   .hero__img {
     max-width: 337px;
@@ -5833,6 +5862,11 @@ ul:not([class]) li + li {
   }
   .main-about {
     padding: 100px 0 50px;
+  }
+  .main-about__desc {
+    max-width: 430px;
+    font-size: 16px;
+    line-height: 20px;
   }
   .advantages {
     grid-gap: 20px;
@@ -5948,6 +5982,14 @@ ul:not([class]) li + li {
     grid-row: initial;
     border-bottom: 1px solid #E6E6E6;
     padding-bottom: 25px;
+  }
+  .main-news__item--xl .main-news__item-title {
+    font-size: 22px;
+    line-height: 1;
+  }
+  .main-news__item--xl .main-news__item-desc {
+    font-size: 16px;
+    line-height: 23px;
   }
   .main-news__item-title {
     max-width: 618px;
@@ -6409,7 +6451,7 @@ ul:not([class]) li + li {
     gap: 30px;
     margin: 10px 0 70px;
   }
-  .deliver__tabs-item {
+  .delivery__tabs-item {
     font-size: 26px;
   }
   .project {
