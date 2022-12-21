@@ -2891,6 +2891,9 @@ ul:not([class]) li + li {
 }
 
 .protect__info-desc {
+  max-width: 740px;
+  font-size: 20px;
+  line-height: 28px;
   margin-bottom: 80px;
 }
 
@@ -3497,6 +3500,7 @@ ul:not([class]) li + li {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  cursor: pointer;
 }
 .catalog-section__item:last-of-type {
   margin-bottom: 0px;
@@ -3506,6 +3510,10 @@ ul:not([class]) li + li {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-left: 6px;
+}
+.catalog-section__item:hover {
+  font-weight: 500;
+  color: #03A543;
 }
 
 .catalog-download {

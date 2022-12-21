@@ -85,6 +85,9 @@
 }
 
 .protect__info-desc {
+    max-width: 740px;
+    font-size: 20px;
+    line-height: 28px;
     margin-bottom: 80px;
     @include md-block {
         max-width: 334px;
