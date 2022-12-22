@@ -194,12 +194,15 @@ const projectSlider = new Swiper('.js-project-slider', {
 })
 
 const menuBtn = document.querySelector('.header__burger');
-const menu = document.querySelector('.header-nav');
+const menuClose = document.querySelector('.header-mob__close')
+const menu = document.querySelector('.header-mob');
 
 const initMenu = function(){
     menuBtn.addEventListener('click', function(){
-        this.classList.toggle('active');
-        menu.classList.toggle('active');
+        menu.classList.add('active');
+    })
+    menuClose.addEventListener('click', function(){
+        menu.classList.remove('active');
     })
 }
 

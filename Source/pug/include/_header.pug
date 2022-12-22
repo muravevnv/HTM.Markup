@@ -39,3 +39,46 @@ header.header
             .header__burger 
                 span 
                 span 
+    .header-mob 
+        .header-mob__top 
+            .header-mob__logo 
+                a(href="#")
+                    img(src="Content/images/logo.svg", alt="") 
+            .header-mob__lang EN
+            .header-mob__search 
+                +svgSprite('icon-search',15,15)
+            .header-mob__fav
+                +svgSprite('icon-fav',15,15)
+            .header-mob__cabinet Войти
+                +svgSprite('icon-cabinet',15,15)
+            .header-mob__close
+                +svgSprite('ico-close',19,19)
+            .header-mob__download Скачать каталог
+        .header-mob__middle 
+            nav.header-mob__nav
+                ul.header-mob__menu 
+                    li.header-mob__menu-item 
+                        a(href="#") Каталог
+                    li.header-mob__menu-item 
+                        a(href="#") О компании
+                    li.header-mob__menu-item 
+                        a(href="#") Портфолио 
+                    li.header-mob__menu-item 
+                        a(href="#") Где купить? 
+                    li.header-mob__menu-item 
+                        a(href="#") Новости 
+                    li.header-mob__menu-item 
+                        a(href="#") Контакты 
+                .header__contacts 
+                    .header__contacts-item
+                        span Телефон
+                        | +7 (495) 125-10-07
+                    .header__contacts-item
+                        span Почта
+                        | info@h-t-l.ru
+        .header-mob__bottom
+            a(href="#").header__download Скачать каталог
+            .header-mob__metric 
+                +svgSprite('icon-metric', 35,35)
+                | Бесплатный замер
+
