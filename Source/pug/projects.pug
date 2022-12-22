@@ -1,0 +1,94 @@
+extends include/layout
+include include/_mixin
+block Content
+    .breadcrumbs 
+        .container 
+            ul.breadcrumbs-list 
+                li.breadcrumbs__item 
+                    a(href="") Главная 
+                li.breadcrumbs__item 
+                    a(href="") Новости
+    .news 
+        .container 
+            h2.news__title Проекты
+            .news__filter 
+                .news__filter-item Все (45)
+                .news__filter-item Уличное (6)
+                .news__filter-item Промышленное (20)
+                .news__filter-item Интерьерное (1)
+                .news__filter-item Ретейл (15)
+                .news__filter-item Медицинское (3)
+            .news-list
+                .news__item 
+                    .news__item-img 
+                        img(src="Content/images/project/project-1.png", alt="Новость")
+                    .news__item-date Уличное
+                    .news__item-title Офис Рочдельская ул
+                    .news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    .news__item-link 
+                        +link('Читать','#')
+                .news__item 
+                    .news__item-img 
+                        img(src="Content/images/project/project-2.png", alt="Новость")
+                    .news__item-date Уличное
+                    .news__item-title ГБУЗ Городская поликлиника № 52, филиал №1 - г. Москва, ул. Ряжская д. 13
+                    .news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    .news__item-link 
+                        +link('Читать','#')
+                .news__item 
+                    .news__item-img 
+                        img(src="Content/images/project/project-3.png", alt="Новость")
+                    .news__item-date Уличное
+                    .news__item-title «Детская городская поликлиника №122 Департамента здравоохранения Москвы»
+                    .news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    .news__item-link 
+                        +link('Читать','#')
+                .news__item 
+                    .news__item-img 
+                        img(src="Content/images/project/project-4.png", alt="Новость")
+                    .news__item-date Уличное
+                    .news__item-title Лужники-Фудкорт-Мосмаркет
+                    .news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    .news__item-link 
+                        +link('Читать','#')
+                .news__item 
+                    .news__item-img 
+                        img(src="Content/images/project/project-5.png", alt="Новость")
+                    .news__item-date Уличное
+                    .news__item-title Офис компании VOGT MEDICAL
+                    .news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    .news__item-link 
+                        +link('Читать','#')
+                .news__item 
+                    .news__item-img 
+                        img(src="Content/images/project/project-6.png", alt="Новость")
+                    .news__item-date Уличное
+                    .news__item-title Тюбинг парк Билайн Парк Горького
+                    .news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    .news__item-link 
+                        +link('Читать','#')
+                .news__item 
+                    .news__item-img 
+                        img(src="Content/images/project/project-7.png", alt="Новость")
+                    .news__item-date Уличное
+                    .news__item-title X5 Retail Group, складской логистический комплекс г. Кинель
+                    .news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    .news__item-link 
+                        +link('Читать','#')
+                .news__item 
+                    .news__item-img 
+                        img(src="Content/images/project/project-8.png", alt="Новость")
+                    .news__item-date Уличное
+                    .news__item-title Региональный склад фармацевтической компании ПУЛЬС г. Краснодар
+                    .news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    .news__item-link 
+                        +link('Читать','#')
+                .news__item 
+                    .news__item-img 
+                        img(src="Content/images/project/project-9.png", alt="Новость")
+                    .news__item-date Уличное
+                    .news__item-title Светодиодная подсветка  в супермаркетах Перекресток
+                    .news__item-desc "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+                    .news__item-link 
+                        +link('Читать','#')
+        

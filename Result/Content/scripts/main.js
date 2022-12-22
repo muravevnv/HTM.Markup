@@ -377,3 +377,24 @@ if(window.innerWidth < 1024) {
         e.classList.add('js-accordeon')
     })
 }
+
+let catalogLine = document.querySelector('.catalog-sort__line');
+let catalogGrid = document.querySelector('.catalog-sort__grid');
+let catalogLayout = document.querySelector('.catalog__items');
+
+let catalogClass = 'catalog__items--line'
+
+catalogLine.addEventListener('click', function(){
+    if(catalogLayout.classList.contains(catalogClass)){
+        return
+    } else {
+        catalogLayout.classList.add(catalogClass)
+    }
+})
+catalogGrid.addEventListener('click', function(){
+    if(catalogLayout.classList.contains(catalogClass)){
+        catalogLayout.classList.remove(catalogClass)
+    } else {
+        
+    }
+})

@@ -453,7 +453,7 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 0 35px 35px;
-    border-bottom: 1px solid rgba(#E6E6E6, .9);
+    
     @include md-block {
         padding: 0px 40px 35px;
     }
@@ -470,6 +470,7 @@
 .categories__item-img {
     padding: 35px;
     margin: auto 0 0 0;
+    border-top: 1px solid rgba(#E6E6E6, .9);
     img {
         display: block;
     }

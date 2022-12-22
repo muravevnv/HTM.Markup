@@ -128,13 +128,14 @@
     &:last-of-type {
         border-bottom: 1px solid rgba($color-black, .3);
     }
-    &.active {
+    &.open {
         .protect__direction-body {
             display: block;
         }
         .protect__direction-head {
             color: $color-primary;
             svg {
+                fill: $color-primary;
                 transform: rotate(180deg);
             }
         }
@@ -159,6 +160,7 @@
     align-items: flex-start;
     justify-content: space-between;
     svg {
+        fill: $color-black;
         flex-shrink: 0;
         display: block;
         margin-top: 5px;

@@ -11,6 +11,10 @@
     &__search {
         width: 100%;
         padding: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
     }
     &__lang {
         border-right: 1px solid #E6E6E6;
