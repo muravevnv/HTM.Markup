@@ -230,19 +230,25 @@ if(tabs) {
 
 
 let points = document.querySelectorAll('.product-structure__point');
-let pointsText = document.querySelectorAll('.product-structure__item');
+let pointsText = document.querySelectorAll('.product-structure__desc-mob');
 
 
 for(let i = 0; i < points.length; i++) {
-    points[i].addEventListener('mouseover',function(){
+    let pointsTextOverlay = pointsText[i].querySelector('.product-structure__desc-overlay');
+    let pointsTextClose = pointsText[i].querySelector('.product-structure__desc-close')
+    points[i].addEventListener('click',function(){
         points[i].classList.add('active');
         pointsText[i].classList.add('active')
     })
-    points[i].addEventListener('mouseout',function(){
+    pointsTextOverlay.addEventListener('click', function(){
         points[i].classList.remove('active');
         pointsText[i].classList.remove('active')
     })
-
+    pointsTextClose.addEventListener('click', function(){
+        points[i].classList.remove('active');
+        pointsText[i].classList.remove('active')
+    })
+    
 }
 
 
@@ -384,17 +390,21 @@ let catalogLayout = document.querySelector('.catalog__items');
 
 let catalogClass = 'catalog__items--line'
 
-catalogLine.addEventListener('click', function(){
-    if(catalogLayout.classList.contains(catalogClass)){
-        return
-    } else {
-        catalogLayout.classList.add(catalogClass)
-    }
-})
-catalogGrid.addEventListener('click', function(){
-    if(catalogLayout.classList.contains(catalogClass)){
-        catalogLayout.classList.remove(catalogClass)
-    } else {
-        
-    }
-})
+
+
+if(catalogLine) {
+    catalogLine.addEventListener('click', function(){
+        if(catalogLayout.classList.contains(catalogClass)){
+            return
+        } else {
+            catalogLayout.classList.add(catalogClass)
+        }
+    })
+    catalogGrid.addEventListener('click', function(){
+        if(catalogLayout.classList.contains(catalogClass)){
+            catalogLayout.classList.remove(catalogClass)
+        } else {
+            
+        }
+    })
+}

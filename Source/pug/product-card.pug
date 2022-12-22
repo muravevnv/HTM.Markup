@@ -143,25 +143,48 @@ block Content
         .product-structure 
             .container 
                 h2.product-structure__title Погружение в детали
-                .product-structure-left
-                    .product-structure__item.product-structure__item--one Основание для установки LED плат
-                    .product-structure__item.product-structure__item--two Корпус светильника
+
                 .product-structure__img
                     img(src="Content/images/str-1.png", alt="")
                     .product-structure__point 
-                        include ../images/line.svg
+                        .product-structure__point-text.product-structure__point-text--left 
+                            .product-structure__point-overlay
+                            span Основание для <br> установки LED плат
                     .product-structure__point
-                        include ../images/line.svg
+                        .product-structure__point-text.product-structure__point-text--left 
+                            .product-structure__point-overlay
+                            span Корпус светильника
                     .product-structure__point 
-                        include ../images/line.svg
+                        .product-structure__point-text.product-structure__point-text--right 
+                            .product-structure__point-overlay
+                            span Крышка
                     .product-structure__point 
-                        include ../images/line.svg
+                        .product-structure__point-text.product-structure__point-text--right 
+                            .product-structure__point-overlay
+                            span LED плата
                     .product-structure__point 
-                        include ../images/line.svg
-                .product-structure-right
-                    .product-structure__item.product-structure__item--three LED плата
-                    .product-structure__item.product-structure__item--four Крышка
-                    .product-structure__item.product-structure__item--five Светорассеиватель
+                        .product-structure__point-text.product-structure__point-text--right 
+                            span Светорассеиватель
+            .product-structure__desc-mob 
+                .product-structure__desc-overlay
+                .product-structure__desc-text Основание для <br> установки LED плат
+                    .product-structure__desc-close
+            .product-structure__desc-mob 
+                .product-structure__desc-overlay
+                .product-structure__desc-text Корпус светильника
+                    .product-structure__desc-close
+            .product-structure__desc-mob 
+                .product-structure__desc-overlay
+                .product-structure__desc-text Крышка
+                    .product-structure__desc-close
+            .product-structure__desc-mob 
+                .product-structure__desc-overlay
+                .product-structure__desc-text LED плата
+                    .product-structure__desc-close
+            .product-structure__desc-mob 
+                .product-structure__desc-overlay
+                .product-structure__desc-text Светорассеиватель
+                    .product-structure__desc-close
         .product-size
             .container 
                 .product-size__content
