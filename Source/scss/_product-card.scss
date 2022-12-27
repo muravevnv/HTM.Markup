@@ -478,16 +478,17 @@
 
 
 .product-video {
-    background: url('../images/video.png') center center / cover no-repeat;
-    padding: 80px 0;
-    .container {
-        position: relative;
-        min-height: 740px;
-        @include md-block {
-            min-height: 280px;
-        }
-        @include sm-block {
-            min-height: 280px;
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    &__player {
+        width: 100%;
+        height: 740px;
+        video {
+            width: 100%;
+            height: 740px;
+            object-fit: cover;
         }
     }
     @include md-block {
@@ -514,7 +515,7 @@
 
 .product-video__title {
     position: absolute;
-    top: 0;
+    top: 40px;
     left: 40px;
     color: #fff;
 }
@@ -523,7 +524,7 @@
 .product-video__info {
     position: absolute;
     right: 40px;
-    bottom: 0;
+    bottom: 40px;
     max-width: 169px;
     text-align: right;
     color: #fff;
@@ -621,6 +622,8 @@
         overflow: auto;
         margin-bottom: 50px;
         width: 100vw;
+        padding: 0 30px;
+        margin: 0 -30px 50px;
         &::-webkit-scrollbar {
             display: none;
         }
@@ -667,6 +670,7 @@
         line-height: 1;
         margin-bottom: 27px;
         padding-left: 40px;
+        white-space: inherit;
         &:last-of-type {
             margin-bottom: 0;
         }
@@ -2038,7 +2042,7 @@
             bottom: 0;
             left: 0;
         }
-        @include sm-block {
+        @media(max-width: 768px) {
             max-width: 100%;
             width: 100%;
         }

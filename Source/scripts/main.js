@@ -257,24 +257,14 @@ for(let i = 0; i < points.length; i++) {
 
 
 let range = document.querySelectorAll('.filter-range');
-// let rangeSliderMin = rangeSlider.querySelector('.filter-range__min');
-// let rangeSliderMax = rangeSlider.querySelector('.filter-range__max');
 
 range.forEach(function(e){
-    // let rangerMin = ;
-    // let rangeMax = ;
+
     let rangeValues = [
         e.querySelector('.filter-range__min'),
         e.querySelector('.filter-range__max')
     ]
     let rangeSlider = e.querySelector('.filter-range__slider')
-
-    // var snapValues = [
-    //     document.getElementById('slider-snap-value-lower'),
-    //     document.getElementById('slider-snap-value-upper')
-    // ];
-    
-    
 
     noUiSlider.create(rangeSlider, {
         start: [rangeSlider.dataset.min, rangeSlider.dataset.max],
@@ -298,27 +288,6 @@ range.forEach(function(e){
         rangeValues[handle].innerHTML = values[handle];
     });
 })
-
-
-// var slider = document.querySelector('.range-slider');
-
-// noUiSlider.create(slider, {
-//     start: [slider.dataset.min, slider.dataset.max],
-//     connect: true,
-//     tooltips: true,
-//     format: {
-//         to: function (value) {
-//             return Math.round(value)
-//         },
-//         from: function (value) {
-//             return Number(value);
-//         }
-//     },
-//     range: {
-//         'min': Number(slider.dataset.min),
-//         'max': Number(slider.dataset.max)
-//     }
-// });
 
 const filter = document.querySelector('.filter');
 const filterBtn = document.querySelector('.catalog-panel__filters');
@@ -411,3 +380,34 @@ if(catalogLine) {
         }
     })
 }
+
+
+let video = document.querySelector('.product-video__player video');
+let videoBtn = document.querySelector('.video__btn ');
+
+if(videoBtn) {
+    videoBtn.addEventListener('click', function(){
+        video.play();
+        video.setAttribute("controls", "true");
+        this.style.display = 'none'
+    })
+}
+
+
+
+let categories = document.querySelectorAll('.categories__item');
+
+
+
+
+if(categories) {
+    for(let i = 0; i < categories.length; i++) {
+        categories[i].addEventListener('click', function(){
+            categories.forEach(function(elem){
+                elem.classList.remove('active')
+            })
+            this.classList.add('active')
+        })
+    }
+}
+

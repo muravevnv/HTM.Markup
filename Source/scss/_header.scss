@@ -127,6 +127,9 @@
         @include md-block {
             height: 60px;
         }
+        @include sm-block {
+            height: 50px;
+        }
     }
     &__metering {
         flex-shrink: 0;
