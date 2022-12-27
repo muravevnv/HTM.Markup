@@ -119,30 +119,34 @@ block Content
                 .product-colors__content 
                     .product-colors__info 
                         h2.product-colors__title Цветовое решение
-                        .product-colors__panel 
-                            .product-colors__subtitle Стандартные цвета корпуса
-                            .product-colors__slider 
-                                .slider.js-slider-color
-                                    .swiper-wrapper 
-                                        .product-colors__slider-item.swiper-slide
-                                            img(src="Content/images/color-1.png", alt="Цвет")
-                                        .product-colors__slider-item.swiper-slide
-                                            img(src="Content/images/color-2.png", alt="Цвет")
-                                        .product-colors__slider-item.swiper-slide
-                                            img(src="Content/images/color-3.png", alt="Цвет")
-                                .slider__next 
-                                    +svgSprite('arrow', 14, 14)
-                                .slider__prev
-                                    +svgSprite('arrow', 14, 14)
-                                
-                    .product-colors__img.slider
-                        .swiper-wrapper
-                            .product-colors__img-slide.swiper-slide 
-                                img(src="Content/images/color-item-1.png", alt="")
-                            .product-colors__img-slide.swiper-slide 
-                                img(src="Content/images/color-item-2.png", alt="")
-                            .product-colors__img-slide.swiper-slide 
-                                img(src="Content/images/color-item-3.png", alt="")
+                        .product-colors__desc Цвет корпуса светильника может быть выполнен в индивидуальном окрашивании по шкале RAL
+                        .product-colors__subtitle Стандартные цвета корпуса
+                        .product-colors__list
+                            .product-colors__list-item.active
+                                img(src="Content/images/color-1.png", alt="Цвет")
+                            .product-colors__list-item
+                                img(src="Content/images/color-2.png", alt="Цвет")
+                            .product-colors__list-item
+                                img(src="Content/images/color-3.png", alt="Цвет")
+                            .product-colors__list-item
+                                img(src="Content/images/color-3.png", alt="Цвет")
+                            .product-colors__list-item
+                                img(src="Content/images/color-3.png", alt="Цвет")
+                            .product-colors__list-item
+                                img(src="Content/images/color-3.png", alt="Цвет")
+                    .product-colors__gallery
+                        .product-colors__img.active
+                            img(src="Content/images/color-item-1.png", alt="")
+                        .product-colors__img
+                            img(src="Content/images/color-item-2.png", alt="")
+                        .product-colors__img
+                            img(src="Content/images/color-item-3.png", alt="")
+                        .product-colors__img
+                            img(src="Content/images/color-item-1.png", alt="")
+                        .product-colors__img
+                            img(src="Content/images/color-item-2.png", alt="")
+                        .product-colors__img
+                            img(src="Content/images/color-item-3.png", alt="")
         .product-structure 
             .container 
                 h2.product-structure__title Погружение в детали

@@ -281,7 +281,7 @@
         padding: 180px 0 150px;
     }
     @include md-block {
-        padding: 70px 0 100px;
+        padding: 70px 0 70px;
     }
 }
 
@@ -489,13 +489,20 @@
             width: 100%;
             height: 740px;
             object-fit: cover;
+
         }
-    }
-    @include md-block {
-        padding: 40px 0 32px;
-    }
-    @include sm-block {
-        padding: 30px 0;
+        @include md-block {
+            height: 320px;
+            video  {
+                height: 320px;
+            }
+        }
+        @include sm-block {
+            height: 300px;
+            video  {
+                height: 300px;
+            }
+        }
     }
     .video__btn-ico {
         @include md-block {
@@ -518,6 +525,10 @@
     top: 40px;
     left: 40px;
     color: #fff;
+    @include sm-block {
+        top: 30px;
+        left: 30px;
+    }
 }
 
 
@@ -544,7 +555,7 @@
     @include md-block {
         max-width: 100%;
         width: calc(100% - 80px);
-        bottom: 0;
+        bottom: 30px;
         left: 40px;
         display: flex;
         align-items: center;
@@ -558,6 +569,8 @@
     @include sm-block {
         font-size: 14px;
         line-height: 15px;
+        width: calc(100% - 60px);
+        left: 30px;
         span {
             font-size: 12px;
             line-height: 13px;
@@ -573,6 +586,9 @@
     @include md-block {
         padding: 100px 0 50px;
         overflow: hidden;
+    }
+    @include sm-block {
+        padding-top: 40px;
     }
 }
 
@@ -692,157 +708,96 @@
 }
 
 .product-colors__content {
-    display: flex; 
+    display: flex;
     align-items: center;
-    gap: 106px;
-    @include xl-block {
-        background: #F5F5F5;
-        border-radius: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0;
+    background: #F5F5F5;
+    border-radius: 20px;
+    @include md-block {
+        flex-direction: column;
+        align-items: flex-start;
     }
     @include sm-block {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 20px;
-        background-color: #fff;
-        padding-top: 68px;
-        position: relative;
+        background: #fff;
     }
 }
 
-.product-colors__img {
-    max-width: 1027px;
+.product-colors__info {
+    padding: 100px 60px;
+    max-width: 580px;
     width: 100%;
-  
-    img {
-        width: 100%;
-        object-fit: cover;
+    @include md-block {
+        padding: 50px 30px 20px;
+    }
+    @include sm-block {
+        padding: 0;
+    }
+}
+
+.product-colors__gallery {
+    max-width: 1012px;
+    width: 100%;
+}
+
+.product-colors__img {
+    display: none;
+    &.active {
         display: block;
     }
 }
 
 .product-colors__title {
-    margin-bottom: 70px;
-    @include xl-block {
-        margin-bottom: 150px;
-    }
-    @include md-block {
-        margin-bottom: 70px;
+    margin-bottom: 50px;
+    @include md-block  {
+        margin-bottom: 35px;
     }
     @include sm-block {
-        position: absolute;
-        top: 0;
-        left: 0;
+        margin-bottom: 40px;
     }
 }
 
-.product-colors__info {
-    max-width: 587px;
+.product-colors__desc {
+    max-width: 573px;
     width: 100%;
-    @include xl-block {
-        padding: 100px 40px 100px 60px;
-    }
-    @include md-block {
-        padding: 50px 30px;
-    }
-    @include sm-block {
-        padding: 0;
-        max-width: 100%;
-    }
-}
-
-.product-colors__panel {
-    padding: 40px 50px;
-    background: #F5F5F5;
-    border-radius: 20px;
-    @include xl-block {
-        padding: 0;
+    margin-bottom: 70px;
+    font-size: 20px;
+    line-height: 24px;
+    @include md-block  {
+        margin-bottom: 50px;
     }
     @include sm-block {
-        padding: 25px 15px 35px;
+        margin-bottom: 40px;
     }
 }
 
 .product-colors__subtitle {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.product-colors__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
     @include sm-block {
-        margin-bottom: 35px;
-        font-size: 20px;
-        line-height: 1;
-        text-align: center;
+        margin-bottom: 40px;
+    }
+    @media(max-width: 495px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
     }
 }
-
-.product-colors__slider {
-    position: relative;
-    padding: 0 86px;
-    .slider__prev {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-    }
-    .slider__next {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-    }
-    &-item {
-        &.swiper-slide {
-            opacity: .5;
-            &:hover {
-                opacity: 1;
-            }
-        }
-        &.swiper-slide-active {
-            opacity: 1;
-        }
-    }
-    @include xl-block {
-        max-width: 450px;
-    }
-    @include md-block {
-        max-width: 294px;
-        padding: 0 54px;
-        .slider__next {
-            width: 40px;
-            height: 40px;
-            svg {
-                width: 11px;
-                height: 11px;
-            }
-        }
-        .slider__prev {
-            width: 40px;
-            height: 40px;
-            svg {
-                width: 11px;
-                height: 11px;
-            }
-        }
-    }
-    @include sm-block{
-        max-width: 285px;
-        padding: 0 50px;
-        margin: 0 auto;
-    }
-}
-
-.product-colors__slider-item {
-    img {
-        width: 100%;
-        display: block;
+.product-colors__list-item {
+    opacity: .4;
+    cursor: pointer;
+    &.active {
+        opacity: 1;
     }
     &:hover {
-        &.swiper-slide {
-
-        }
+        opacity: 1;
     }
+   
 }
-
 
 .product-structure {
     padding: 100px 0 50px;
@@ -1420,6 +1375,10 @@
             opacity: .5;
             &:hover {
                 opacity: 1;
+                .product-size__slider-text {
+                    color:#03A543;
+                    font-weight: 500;
+                }
             }
         }
         &.swiper-slide-active {
@@ -1889,7 +1848,11 @@
         display: flex;
         align-items: center;
         @include xl-block {
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+        @media(max-width: 1200px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;   
         }
         @include md-block {
             display: grid;
@@ -1918,6 +1881,12 @@
         }
     }
     &__item {
+        @include xl-block {
+            &:nth-of-type(1) {
+                grid-column: span 2;
+            }
+        }
+
         @include md-block {
             &:first-of-type {
                 grid-column: 1 / 4;

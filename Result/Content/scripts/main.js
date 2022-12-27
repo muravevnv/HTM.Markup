@@ -28,41 +28,6 @@ if(sliderMainTotal) {
 }
 
 
-
-const productSliderColorImg = new Swiper('.product-colors__img', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-
-})
-
-const productSliderColor = new Swiper('.js-slider-color',{
-    slidesPerView: 3,
-    spaceBetween: 20,
-    freeMode: true,
-    watchSlidesProgress: true,
-    loop: true,
-    navigation: {
-        prevEl:'.slider__prev',
-        nextEl:'.slider__next',
-    },
-    thumbs: {
-        swiper: productSliderColorImg,
-    },
-})
-
-let slideColor = document.querySelectorAll('.js-slider-color .swiper-slide');
-
-slideColor.forEach((e)=>{
-    e.addEventListener('click', function(){
-        productSliderColor.slideNext();
-        productSliderColorImg.slideNext();
-        return !1;
-
-    })
-})
-
-
 const productSizeColor = new Swiper('.js-slider-size',{
     slidesPerView: 'auto',
     spaceBetween: 35,
@@ -370,11 +335,15 @@ if(catalogLine) {
             return
         } else {
             catalogLayout.classList.add(catalogClass)
+            catalogLine.classList.add('active')
+            catalogGrid.classList.remove('active')
         }
     })
     catalogGrid.addEventListener('click', function(){
         if(catalogLayout.classList.contains(catalogClass)){
             catalogLayout.classList.remove(catalogClass)
+            catalogLine.classList.remove('active')
+            catalogGrid.classList.add('active')
         } else {
             
         }
@@ -410,4 +379,21 @@ if(categories) {
         })
     }
 }
+
+
+
+let colorsItems =  document.querySelectorAll('.product-colors__list-item');
+let colorsImg = document.querySelectorAll('.product-colors__img');
+
+if(colorsItems) {
+    for(let i = 0; i < colorsItems.length; i++) {
+        colorsItems[i].addEventListener('click', function(){
+            colorsItems.forEach(elem => elem.classList.remove('active'))
+            colorsImg.forEach(elem => elem.classList.remove('active'))
+            colorsItems[i].classList.add('active');
+            colorsImg[i].classList.add('active');
+        })
+    }
+}
+
 

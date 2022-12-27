@@ -18,12 +18,28 @@ block Content
                 .page__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     .catalog 
         .catalog-asside
-            .catalog-list.open
+            .catalog-list.open.active
                 .catalog-list__head.js-accordeon 
                     span Каталог
                         +svgSprite('icon-arrow-up', 15, 15)
                     .catalog-list__close 
                         +svgSprite('icon-close', 19,19)
+                .catalog-list__panel
+                    .catalog-sort__item 
+                        +svgSprite('ico-sort-item', 14, 12)
+                        .catalog-sort__select по типу
+                    .catalog-sort__item 
+                        +svgSprite('ico-view-item', 14, 12)
+                        .catalog-sort__select 64
+                    .catalog-sort__grid.active 
+                        //- +svgSprite('ico-sort-grid',25,25)
+                        include ../images/svg-sprite/ico-sort-grid.svg
+                    .catalog-sort__line
+                        //- +svgSprite('ico-sort-line',25,25)
+                        include ../images/svg-sprite/ico-sort-line.svg
+                    .catalog-sort__compare 
+                        | К сравнению: 
+                        span 2
                 .catalog-list__body.open 
                     .catalog-section.open 
                         .catalog-section__head.js-accordeon BUSINESS 
@@ -223,8 +239,6 @@ block Content
                     .catalog-download__text Скачать каталог
                         span PDF, 1.1Mb
                     +svgSprite('icon-download',30, 28)
-                    
-                            
         .catalog-main
             .catalog-head 
                 .catalog-sort__item 
@@ -235,9 +249,11 @@ block Content
                     .catalog-sort__select 64
                 .catalog-sort__panel 
                     .catalog-sort__grid.active 
-                        +svgSprite('ico-sort-grid',25,25)
+                        //- +svgSprite('ico-sort-grid',25,25)
+                        include ../images/svg-sprite/ico-sort-grid.svg
                     .catalog-sort__line
-                        +svgSprite('ico-sort-line',25,25)
+                        //- +svgSprite('ico-sort-line',25,25)
+                        include ../images/svg-sprite/ico-sort-line.svg
                     .catalog-sort__compare К сравнению:
                         span 2
             .catalog-panel-mob

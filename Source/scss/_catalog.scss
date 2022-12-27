@@ -91,13 +91,18 @@
     justify-content: center;
     cursor: pointer;
     border-right: 1px solid $color-border;
-    svg {
-        
-        opacity: .5;
+    svg rect {
+        opacity: 1;
         fill: rgba($color-black, .5);
     }
+    &:hover {
+        svg rect {               
+            opacity: 1;
+            fill: $color-primary;
+        }
+    }
     &.active {
-        svg {
+        svg rect {
             opacity: 1;
             fill: $color-primary;
         }
@@ -106,6 +111,19 @@
         svg {
             width: 15px;
             height: 15px;
+        }
+    }
+    @include md-block {
+        svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+    @include sm-block {
+        width: 80px;
+        svg {
+            width: 20px;
+            height: 20px;
         }
     }
 }
@@ -147,6 +165,16 @@
             margin-left: 0;
         }
     }
+    @include md-block {
+        padding: 28px 30px;
+        span {
+            margin: 0 0 0 8px;
+        }
+    }
+    @include sm-block {
+        width: calc(100% - 160px);
+        justify-content: center;
+    }
 }
 
 .catalog-sort__item {
@@ -170,6 +198,18 @@
             display: block;
             margin-bottom: 5px;
         }
+    }
+    @include md-block {
+        padding: 24px 30px;
+        svg {
+            display: block;
+            margin-right: 15px;
+        }
+    }
+    @include sm-block {
+        width: 50%;
+        border-bottom: 1px solid $color-border;
+        padding: 22.5px 30px;
     }
 }
 
@@ -322,6 +362,18 @@
         &.active {
             display: block;
         }
+    }
+}
+
+.catalog-list__panel {
+    display: none;
+    @include md-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr 85px 85px 1fr;
+    }
+    @include sm-block {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
