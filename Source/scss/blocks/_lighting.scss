@@ -1,17 +1,35 @@
 .lighting {
     padding: 90px 0;
+    @include md-block {
+        padding: 50px 0;
+    }
+    @include sm-block {
+        padding: 35px 0;
+    }
 }
 
 .lighting-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include md-block {
+        flex-direction: column-reverse;
+    }
 }
 
 .lighting__info {
     max-width: 559px;
     width: 100%;
     margin-left: 40px;
+    @include md-block {
+        max-width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+    @include sm-block {
+        margin-bottom: 30px;
+    }
 }
 
 .lighting__img {
@@ -25,6 +43,12 @@
 
 .lighting__title {
     margin-bottom: 30px;
+    @include md-block {
+        margin-bottom: 35px;
+    }
+    @include sm-block {
+        margin-bottom: 30px;
+    }
 }
 
 .lighting__desc {
@@ -33,6 +57,16 @@
     margin-bottom: 60px;
     span {
         font-weight: 500;
+    }
+    @include md-block {
+        max-width: 509px;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    @include sm-block {
+        margin-bottom: 30px;
+        max-width: 100%;
+        font-size: 18px;
     }
 }
 
@@ -58,5 +92,26 @@
     &:first-of-type {
         border-right: 1px solid $color-black;
         padding: 15px 30px 15px 0;
+    }
+    @include md-block {
+        padding: 15px 40px;
+        &:first-of-type {
+            padding: 15px 40px 15px 0;
+        }
+    }
+    @include sm-block {
+        padding: 6px 13px;
+       
+        &-title {
+            font-size: 14px;
+            line-height: 1.25;
+            margin-bottom: 36px;
+        }
+        &-value {
+            font-size: 24px;
+        }
+        &:first-of-type {
+            padding: 6px 13px 6px 0;
+        }
     }
 }

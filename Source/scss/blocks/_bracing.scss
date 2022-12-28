@@ -7,21 +7,53 @@
     align-items: center;
     background: #F5F5F5;
     border-radius: 20px;
+    @include md-block {
+        flex-direction: column;
+        padding: 39px 0 69px;
+    }
+    @include sm-block {
+        padding: 18px 0;
+    }
 }
 
 .bracing__info {
     max-width: 693px;
     width: 100%;
     padding: 100px 47px 136px 60px;
+    @include md-block {
+        max-width: 100%;
+        padding: 0 30px 34px;
+    }
+    @include sm-block {
+        padding: 22px 20px 15px;
+    }
+    ul li {
+        @include sm-block {
+            font-size: 18px;
+            + li {
+                margin-top: 15px;
+            }
+        }
+    }
 }
 
 .bracing__img {
     max-width: 1029px;
     width: 100%;
+    img {
+        width: 100%;
+        display: block;
+    }
 }
 
 .bracing__title {
     margin-bottom: 70px;
+    @include md-block {
+        margin-bottom: 35px;
+    }
+    @include sm-block {
+        margin-bottom: 30px;
+    }
 }
 
 .bracing__desc {
@@ -33,10 +65,22 @@
         color: $color-primary;
         font-weight: 500;
     }
+    @include md-block {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    @include sm-block {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
 }
 
 .bracing__subtitle {
     font-size: 20px;
     line-height: 1.25;
     margin-bottom: 30px;
+    @include sm-block {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
 }

@@ -4812,6 +4812,10 @@ ul:not([class]) li + li {
   max-width: 1029px;
   width: 100%;
 }
+.bracing__img img {
+  width: 100%;
+  display: block;
+}
 
 .bracing__title {
   margin-bottom: 70px;
@@ -5164,6 +5168,20 @@ ul:not([class]) li + li {
   }
   .catalog__items {
     grid-template-columns: 1fr 1fr;
+  }
+  .functions__img {
+    max-width: 100%;
+  }
+  .functions-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .functions__info {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 35px;
   }
 }
 
@@ -6619,6 +6637,101 @@ ul:not([class]) li + li {
     font-size: 16px;
     line-height: 20px;
   }
+  .functions {
+    padding: 50px 0 100px;
+  }
+  .functions__title {
+    margin-bottom: 35px;
+  }
+  .functions__desc {
+    max-width: 413px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .functions__list {
+    max-width: 497px;
+    gap: 15px 22px;
+  }
+  .functions__list-item {
+    font-size: 20px;
+    line-height: 1;
+  }
+  .lighting {
+    padding: 50px 0;
+  }
+  .lighting-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .lighting__info {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+  .lighting__title {
+    margin-bottom: 35px;
+  }
+  .lighting__desc {
+    max-width: 509px;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  .lighting__item {
+    padding: 15px 40px;
+  }
+  .lighting__item:first-of-type {
+    padding: 15px 40px 15px 0;
+  }
+  .dimensions {
+    padding: 50px 0;
+  }
+  .dimensions-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .dimensions__info {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 45px;
+  }
+  .dimensions__title {
+    margin-bottom: 35px;
+  }
+  .dimensions__desc {
+    max-width: 334px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .dimensions__list {
+    gap: 28px 97px;
+  }
+  .dimensions__list-item {
+    font-size: 18px;
+  }
+  .bracing-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 39px 0 69px;
+  }
+  .bracing__info {
+    max-width: 100%;
+    padding: 0 30px 34px;
+  }
+  .bracing__title {
+    margin-bottom: 35px;
+  }
+  .bracing__desc {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 768px){
@@ -7835,6 +7948,92 @@ ul:not([class]) li + li {
   }
   .main-news__item-desc {
     display: none;
+  }
+  .functions {
+    padding: 35px 0 70px;
+  }
+  .functions__info {
+    margin-bottom: 30px;
+  }
+  .functions__title {
+    margin-bottom: 30px;
+  }
+  .functions__desc {
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+  .functions__list-item {
+    padding: 9px 14px;
+    font-size: 16px;
+  }
+  .lighting {
+    padding: 35px 0;
+  }
+  .lighting__info {
+    margin-bottom: 30px;
+  }
+  .lighting__title {
+    margin-bottom: 30px;
+  }
+  .lighting__desc {
+    margin-bottom: 30px;
+    max-width: 100%;
+    font-size: 18px;
+  }
+  .lighting__item {
+    padding: 6px 13px;
+  }
+  .lighting__item-title {
+    font-size: 14px;
+    line-height: 1.25;
+    margin-bottom: 36px;
+  }
+  .lighting__item-value {
+    font-size: 24px;
+  }
+  .lighting__item:first-of-type {
+    padding: 6px 13px 6px 0;
+  }
+  .dimensions {
+    padding: 35px 0;
+  }
+  .dimensions__title {
+    margin-bottom: 30px;
+  }
+  .dimensions__desc {
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  .dimensions__list {
+    gap: 18px 22px;
+  }
+  .dimensions__list-item {
+    padding: 9px 14px;
+    font-size: 16px;
+  }
+  .bracing-content {
+    padding: 18px 0;
+  }
+  .bracing__info {
+    padding: 22px 20px 15px;
+  }
+  .bracing__info ul li {
+    font-size: 18px;
+  }
+  .bracing__info ul li + li {
+    margin-top: 15px;
+  }
+  .bracing__title {
+    margin-bottom: 30px;
+  }
+  .bracing__desc {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .bracing__subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
   }
 }
 

@@ -115,7 +115,10 @@ block Content
                             li подвесной на стальном тросовом подвессе; 
                             li накладной на потолочное перекрытие с помощью соединительных скоб
                     .bracing__img 
-                        img(src="Content/images/bracing-1.png", alt="")
+                        picture 
+                            source(srcset="Content/images/product/bracing-sm.png" media="(max-width: 1024px)")
+                            source(srcset="Content/images/product/bracing-md.png" media="(max-width: 1600px)")
+                            img(src="Content/images/bracing-1.png", alt="")
         .dimensions
             .container 
                 .dimensions-content 
@@ -129,7 +132,9 @@ block Content
                             .dimensions__list-item 1550 х 1240 мм
                             .dimensions__list-item 2073 х 1803 мм
                     .dimensions__img 
-                        img(src="Content/images/product/dimensions.png", alt="Габариты")
+                        picture 
+                            source(srcset="Content/images/product/dimensions-sm.png" media="(max-width: 767px)")
+                            img(src="Content/images/product/dimensions.png", alt="Габариты")
         .product-colors 
             .container 
                 .product-colors__content 
@@ -168,7 +173,7 @@ block Content
                 .lighting-content 
                     .lighting__img 
                         picture 
-                            source(srcset="Content/images/light-item-mob.png" media='(max-width: 1024px)') 
+                            source(srcset="Content/images/product/lighting-sm.png" media='(max-width: 767px)') 
                             img(src="Content/images/light-item.png", alt="Угол света")
                     .lighting__info 
                         h2.lighting__title Варианты освещения
@@ -193,13 +198,14 @@ block Content
                             .functions__list-item TunableWhite
                             .functions__list-item RBTW
                             .functions__list-item CASAMBI
-                            .functions__list-item Аварийным источником питания на 180 минут
+                            .functions__list-item Аварийным источником питания
                     .functions__img 
-                        img(src="Content/images/product/functions.png", alt="")
+                        picture 
+                            source(srcset="Content/images/product/functions-sm.png" media="(max-width: 495px)")
+                            img(src="Content/images/product/functions.png", alt="")
         .product-structure 
             .container 
                 h2.product-structure__title Погружение в детали
-
                 .product-structure__img
                     img(src="Content/images/str-1.png", alt="")
                     .product-structure__point 
