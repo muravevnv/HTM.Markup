@@ -698,12 +698,12 @@
 }
 
 .product-colors {
-    padding: 90px 0 180px;
+    padding: 90px 0;
     @include xl-block {
-        padding: 75px 0 150px;
+        padding: 75px 0;
     }
     @include md-block {
-        padding: 50px 0 100px;
+        padding: 50px 0;
     }
 }
 
@@ -1559,12 +1559,12 @@
     }
 }
 .product-corner {
-    padding: 180px 0 90px;
+    padding: 90px 0;
     @include sm-block {
-        padding: 100px 0 50px;
+        padding:50px 0;
     }
     @include sm-block {
-        padding: 70px 0 35px;
+        padding:35px 0;
     }
     &__content {
         display: flex;

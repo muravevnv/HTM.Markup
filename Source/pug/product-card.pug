@@ -102,18 +102,34 @@ block Content
                 .product-video__info 
                     span Длительность видео
                     | 1:33
-        .product-bracing
+        .bracing 
             .container 
-                .product-bracing__content 
-                    .product-bracing__img 
-                        img(src="Content/images/bracing-1.png", alt="Накладной потолочный")
-                    .product-bracing__info 
-                        h2.product-bracing__title Стандартные типы крепления
-                        .product-bracing__types
-                            .product-bracing__type.active Накладной потолочный
-                            .product-bracing__type Накладной настенный
-                            .product-bracing__type Подвесной на троссовом подвесе
-                            .product-bracing__type Подвесной на резьбовые шпильки м4
+                .bracing-content 
+                    .bracing__info
+                        h2.bracing__title Варианты монтажа
+                        .bracing__desc 
+                            span DROP
+                            | - лучший выбор для освещения больших площадей помещений
+                        .bracing__subtitle В стандартных модификациях имеется два типа крепления:
+                        ul 
+                            li подвесной на стальном тросовом подвессе; 
+                            li накладной на потолочное перекрытие с помощью соединительных скоб
+                    .bracing__img 
+                        img(src="Content/images/bracing-1.png", alt="")
+        .dimensions
+            .container 
+                .dimensions-content 
+                    .dimensions__info 
+                        h2.dimensions__title Габариты светильника DROP
+                        .dimensions__desc В стандартной номенклатуре представлено 5-типов размеров:
+                        .dimensions__list 
+                            .dimensions__list-item 1290 х 1050 мм
+                            .dimensions__list-item 1612 х 1500 мм
+                            .dimensions__list-item 2320 х 1985 мм
+                            .dimensions__list-item 1550 х 1240 мм
+                            .dimensions__list-item 2073 х 1803 мм
+                    .dimensions__img 
+                        img(src="Content/images/product/dimensions.png", alt="Габариты")
         .product-colors 
             .container 
                 .product-colors__content 
@@ -147,6 +163,39 @@ block Content
                             img(src="Content/images/color-item-2.png", alt="")
                         .product-colors__img
                             img(src="Content/images/color-item-3.png", alt="")
+        .lighting
+            .container 
+                .lighting-content 
+                    .lighting__img 
+                        picture 
+                            source(srcset="Content/images/light-item-mob.png" media='(max-width: 1024px)') 
+                            img(src="Content/images/light-item.png", alt="Угол света")
+                    .lighting__info 
+                        h2.lighting__title Варианты освещения
+                        .lighting__desc 
+                            span СТТ
+                            | : выбор диапазона белого цвета 2700 - 6500К По индивидуальному запросу может быть в любом исполнении
+                        .lighting__items 
+                            .lighting__item
+                                .lighting__item-title Индекс цветопередачи
+                                .lighting__item-value CRI90+
+                            .lighting__item
+                                .lighting__item-title Угол светорассеивания
+                                .lighting__item-value 120 гр.
+        .functions
+            .container 
+                .functions-content 
+                    .functions__info 
+                        h2.functions__title Контроль и опции
+                        .functions__desc Светодиодный светильник DROP может оснащаться опциональными функциями:
+                        .functions__list 
+                            .functions__list-item DALI-DALI 2.0
+                            .functions__list-item TunableWhite
+                            .functions__list-item RBTW
+                            .functions__list-item CASAMBI
+                            .functions__list-item Аварийным источником питания на 180 минут
+                    .functions__img 
+                        img(src="Content/images/product/functions.png", alt="")
         .product-structure 
             .container 
                 h2.product-structure__title Погружение в детали
@@ -192,105 +241,96 @@ block Content
                 .product-structure__desc-overlay
                 .product-structure__desc-text Светорассеиватель
                     .product-structure__desc-close
-        .product-size
-            .container 
-                .product-size__content
-                    h2.product-size__title Размеры
-                    .product-size__slider
-                        .js-slider-size.slider
-                            .swiper-wrapper  
-                                .product-size__slider-item.swiper-slide
-                                    .product-size__slider-img
-                                        img(src="Content/images/size-item-1.png", alt="Размер")
-                                    .product-size__slider-text 1290х1050
-                                .product-size__slider-item.swiper-slide
-                                    .product-size__slider-img
-                                        img(src="Content/images/size-item-2.png", alt="Размер")
-                                    .product-size__slider-text 1550х1240
-                                .product-size__slider-item.swiper-slide
-                                    .product-size__slider-img
-                                        img(src="Content/images/size-item-3.png", alt="Размер")
-                                    .product-size__slider-text 1612х1500
-                                .product-size__slider-item.swiper-slide
-                                    .product-size__slider-img
-                                        img(src="Content/images/size-item-4.png", alt="Размер")
-                                    .product-size__slider-text 2073х1803
-                                .product-size__slider-item.swiper-slide
-                                    .product-size__slider-img
-                                        img(src="Content/images/size-item-5.png", alt="Размер")
-                                    .product-size__slider-text 2320х1985
-                                .product-size__slider-item.swiper-slide
-                                    .product-size__slider-img
-                                        img(src="Content/images/size-item-5.png", alt="Размер")
-                                    .product-size__slider-text 2320х1985
-                            .swiper-pagination
-                        .product-size__next 
-                            +svgSprite('arrow', 18, 18)
-                        .product-size__prev
-                            +svgSprite('arrow', 18, 18)
-                .product-size__img 
-                    img(src="Content/images/size-bg.png", alt="Бг")
-        .product-light 
-            .product-ligth__list.js-light-slider 
-                .swiper-wrapper
-                    .product-light__item.swiper-slide
-                        .product-light__img 
-                            img(src="Content/images/product-light-1.png", alt="")
-                        .product-light__title 
-                            span 3000K
-                            | теплый свет
-                    .product-light__item.swiper-slide
-                        .product-light__img 
-                            img(src="Content/images/product-light-1.png", alt="")
-                        .product-light__title 
-                            span 3500K
-                            | нейтральный свет
-                    .product-light__item.swiper-slide
-                        .product-light__img 
-                            img(src="Content/images/product-light-1.png", alt="")
-                        .product-light__title 
-                            span 4000K
-                            | дневной белый 
-                    .product-light__item.swiper-slide
-                        .product-light__img 
-                            img(src="Content/images/product-light-1.png", alt="")
-                        .product-light__title 
-                            span 5000K
-                            | кристально белый
-                .slider__prev
-                    +svgSprite('arrow', 18, 18)
-                .slider__next 
-                    +svgSprite('arrow', 18, 18)
-                .swiper-pagination
-        .product-corner 
-            .container 
-                .product-corner__content 
-                    .product-corner__img 
-                        picture 
-                            source(srcset="Content/images/light-item-mob.png" media='(max-width: 1024px)') 
-                            img(src="Content/images/light-item.png", alt="Угол света")
-                    .product-corner__info 
-                        h2.product-corner__title Угол света
-                        .product-corner__desc Дизайнерский светодиодный светильник DROP имеет в стандартной модификации угол рассеиваения 120 °
-        .product-options 
-            .container 
-                .product-options__list 
-                    .product-options__item 
-                        .product-options__img 
-                            img(src="Content/images/parameter-1.svg", alt="")
-                        .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
-                    .product-options__item 
-                        .product-options__img 
-                            img(src="Content/images/parameter-2.svg", alt="")
-                        .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
-                    .product-options__item 
-                        .product-options__img 
-                            img(src="Content/images/parameter-3.svg", alt="")
-                        .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
-                    .product-options__item 
-                        .product-options__img 
-                            img(src="Content/images/parameter-4.svg", alt="")
-                        .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
+        //- .product-size
+        //-     .container 
+        //-         .product-size__content
+        //-             h2.product-size__title Размеры
+        //-             .product-size__slider
+        //-                 .js-slider-size.slider
+        //-                     .swiper-wrapper  
+        //-                         .product-size__slider-item.swiper-slide
+        //-                             .product-size__slider-img
+        //-                                 img(src="Content/images/size-item-1.png", alt="Размер")
+        //-                             .product-size__slider-text 1290х1050
+        //-                         .product-size__slider-item.swiper-slide
+        //-                             .product-size__slider-img
+        //-                                 img(src="Content/images/size-item-2.png", alt="Размер")
+        //-                             .product-size__slider-text 1550х1240
+        //-                         .product-size__slider-item.swiper-slide
+        //-                             .product-size__slider-img
+        //-                                 img(src="Content/images/size-item-3.png", alt="Размер")
+        //-                             .product-size__slider-text 1612х1500
+        //-                         .product-size__slider-item.swiper-slide
+        //-                             .product-size__slider-img
+        //-                                 img(src="Content/images/size-item-4.png", alt="Размер")
+        //-                             .product-size__slider-text 2073х1803
+        //-                         .product-size__slider-item.swiper-slide
+        //-                             .product-size__slider-img
+        //-                                 img(src="Content/images/size-item-5.png", alt="Размер")
+        //-                             .product-size__slider-text 2320х1985
+        //-                         .product-size__slider-item.swiper-slide
+        //-                             .product-size__slider-img
+        //-                                 img(src="Content/images/size-item-5.png", alt="Размер")
+        //-                             .product-size__slider-text 2320х1985
+        //-                     .swiper-pagination
+        //-                 .product-size__next 
+        //-                     +svgSprite('arrow', 18, 18)
+        //-                 .product-size__prev
+        //-                     +svgSprite('arrow', 18, 18)
+        //-         .product-size__img 
+        //-             img(src="Content/images/size-bg.png", alt="Бг")
+        //- .product-light 
+        //-     .product-ligth__list.js-light-slider 
+        //-         .swiper-wrapper
+        //-             .product-light__item.swiper-slide
+        //-                 .product-light__img 
+        //-                     img(src="Content/images/product-light-1.png", alt="")
+        //-                 .product-light__title 
+        //-                     span 3000K
+        //-                     | теплый свет
+        //-             .product-light__item.swiper-slide
+        //-                 .product-light__img 
+        //-                     img(src="Content/images/product-light-1.png", alt="")
+        //-                 .product-light__title 
+        //-                     span 3500K
+        //-                     | нейтральный свет
+        //-             .product-light__item.swiper-slide
+        //-                 .product-light__img 
+        //-                     img(src="Content/images/product-light-1.png", alt="")
+        //-                 .product-light__title 
+        //-                     span 4000K
+        //-                     | дневной белый 
+        //-             .product-light__item.swiper-slide
+        //-                 .product-light__img 
+        //-                     img(src="Content/images/product-light-1.png", alt="")
+        //-                 .product-light__title 
+        //-                     span 5000K
+        //-                     | кристально белый
+        //-         .slider__prev
+        //-             +svgSprite('arrow', 18, 18)
+        //-         .slider__next 
+        //-             +svgSprite('arrow', 18, 18)
+        //-         .swiper-pagination
+        
+        //- .product-options 
+        //-     .container 
+        //-         .product-options__list 
+        //-             .product-options__item 
+        //-                 .product-options__img 
+        //-                     img(src="Content/images/parameter-1.svg", alt="")
+        //-                 .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
+        //-             .product-options__item 
+        //-                 .product-options__img 
+        //-                     img(src="Content/images/parameter-2.svg", alt="")
+        //-                 .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
+        //-             .product-options__item 
+        //-                 .product-options__img 
+        //-                     img(src="Content/images/parameter-3.svg", alt="")
+        //-                 .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
+        //-             .product-options__item 
+        //-                 .product-options__img 
+        //-                     img(src="Content/images/parameter-4.svg", alt="")
+        //-                 .product-options__text Система <span>TUNABLE WHITE 2700-6500K</span> (смена диапозона свечения от теплого до холодного).
         .product-tabs 
             .container 
                 .product-tabs-head 
