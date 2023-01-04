@@ -2007,13 +2007,11 @@
         max-width: 430px;
         width: 100%;
         @include md-block {
+            max-width: 100%;
+            width: 100%;
             position: absolute;
             bottom: 0;
             left: 0;
-        }
-        @media(max-width: 768px) {
-            max-width: 100%;
-            width: 100%;
         }
     }
 }

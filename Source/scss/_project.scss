@@ -32,9 +32,29 @@
     }
 }
 
+.product-gallery__view {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: $color-white;
+    width: 40px;
+    height: 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    svg {
+        display: block;
+    }
+    @include md-block {
+        display: flex;
+    }
+}
 .project-gallery__item {
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
     &--xl {
         grid-column: 1 / 4;
     }
@@ -51,11 +71,12 @@
     }
     @include sm-block {
         &--xl {
-            grid-template-columns: 1 / 2;
+            grid-column: 1 / 2;
             width: calc(100% + 60px);
             margin: 0 -30px;
             height: 280px;
-            border-radius: 0;
+            border-radius: 2px;
+            overflow: hidden;
         }
     }
 }
